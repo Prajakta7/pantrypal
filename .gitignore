@@ -1,0 +1,15 @@
+# Secrets: never commit these
+.env
+tools.yaml
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Temporary data files
+*.ndjson
+
+# Mac system files
+.DS_Store
