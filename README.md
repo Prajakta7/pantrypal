@@ -1,6 +1,6 @@
-# 🥕 PantryPal
+#  PantryPal
 
-**A kitchen assistant built on AlloyDB AI, BigQuery and Gemini.** Tell it what you bought, in English or Hinglish, and it keeps track of your pantry and spice rack, suggests recipes that fit your diet and use up food before it expires, and checks your pantry against FDA food recalls.
+**A kitchen assistant built on AlloyDB AI, BigQuery and Gemini.** Tell it what you bought, in English and it keeps track of your pantry and spice rack, suggests recipes that fit your diet and use up food before it expires and checks your pantry against FDA food recalls.
 
 ## Features
 
@@ -54,12 +54,8 @@ A few SQL files run in AlloyDB Studio. Full instructions: [docs/setup.md](docs/s
 
 ## Data
 
-- **Recipes:** 112 original starter recipes, 78 of them Indian: everyday dishes (dal tadka, poha, palak paneer, khichdi) plus the dishes from my 30-day healthy meal plan (CCFA tea, egg pesarattu, ragi moong dal idli, spinach besan chilla, jowar roti, gongura chicken pulao, black sesame laddoo…). Diet labels are hand-checked. Recipes you add get AI labels.
+- **Recipes:** 112 original starter recipes
 - **Recalls:** real FDA food enforcement reports from the [openFDA API](https://open.fda.gov/apis/food/enforcement/), loaded into your own BigQuery dataset. Run `make recalls` weekly to refresh.
 - **Pantry:** starts empty. An optional **demo pantry** (an Indian kitchen: spice rack, millets, dry fruits and seeds) is available for trying it out; the app labels it clearly and removes it with one click.
 
 Recall matches are based on product names and can be wrong. Always check the brand and lot codes on your package against the notice. Diet labels can be wrong too: most hing contains wheat flour, and some cheeses use animal rennet.
-
-## Why I built it
-
-I attended a hands-on AlloyDB AI workshop with Google Cloud and wanted to apply AI search, AI functions and AlloyDB–BigQuery interoperability to something I'd use every day.
