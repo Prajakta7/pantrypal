@@ -1,6 +1,6 @@
 #  PantryPal
 
-**A kitchen assistant built on AlloyDB AI, BigQuery and Gemini.** Tell it what you bought, in English and it keeps track of your pantry and spice rack, suggests recipes that fit your diet and use up food before it expires and checks your pantry against FDA food recalls.
+**A kitchen assistant built on AlloyDB AI, BigQuery and Gemini.** Tell it what you bought and it keeps track of your pantry and spice rack, suggests recipes that fit your diet and use up food before it expires and checks your pantry against FDA food recalls.
 
 ## Features
 
