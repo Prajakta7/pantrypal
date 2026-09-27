@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PantryPal · cook what you have</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* "Masala" palette: emerald, marigold, pomegranate and plum on warm cream */
+    --bg: #FFF8EF; --surface: #FFFFFF; --surface-2: #FFFBF5; --line: #F0E4D3; --line-2: #E4D3BC;
+    --ink: #22181A; --muted: #6B5B55; --faint: #9A8A82;
+    --basil: #0E8A62; --basil-ink: #0A6A4B; --basil-soft: #DDF5EA;
+    --saffron: #C26A00; --saffron-dot: #F59E0B; --saffron-soft: #FFEBC9;
+    --tomato: #D6336C; --tomato-soft: #FFE1EB;
+    --sky: #6D4AC9; --sky-soft: #EEE7FF;
+    --haldi: #E8A10C; --haldi-soft: #FFF1CC;
+    --grad-brand: linear-gradient(135deg, #F59E0B 0%, #EF4B6C 55%, #B83280 100%);
+    --grad-user: linear-gradient(135deg, #0E8A62 0%, #0F9C8E 100%);
+    --grad-hero: linear-gradient(120deg, #FFF3D6 0%, #FFE4EC 50%, #E6F7EF 100%);
+    --blob-1: rgba(245, 158, 11, 0.22); --blob-2: rgba(239, 75, 108, 0.16); --blob-3: rgba(14, 138, 98, 0.14);
+    --dots: rgba(194, 106, 0, 0.09);
+    --shadow: 0 1px 2px rgba(80, 40, 20, 0.05), 0 10px 28px rgba(120, 60, 20, 0.08);
+    --radius: 18px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17111F; --surface: #211A2B; --surface-2: #2A2236; --line: rgba(255,255,255,0.08); --line-2: rgba(255,255,255,0.15);
+      --ink: #F4EEF6; --muted: #B8ABC0; --faint: #8C7F96;
+      --basil: #34D39A; --basil-ink: #7BE8BF; --basil-soft: rgba(52,211,154,0.14);
+      --saffron: #FBBF24; --saffron-dot: #FBBF24; --saffron-soft: rgba(251,191,36,0.15);
+      --tomato: #FB7199; --tomato-soft: rgba(251,113,153,0.15);
+      --sky: #B39BFF; --sky-soft: rgba(179,155,255,0.15);
+      --haldi: #FCD34D; --haldi-soft: rgba(252,211,77,0.14);
+      --grad-user: linear-gradient(135deg, #0E8A62 0%, #0F7C8A 100%);
+      --grad-hero: linear-gradient(120deg, rgba(251,191,36,0.14) 0%, rgba(251,113,153,0.12) 50%, rgba(52,211,154,0.10) 100%);
+      --blob-1: rgba(251, 191, 36, 0.13); --blob-2: rgba(236, 72, 153, 0.13); --blob-3: rgba(52, 211, 154, 0.09);
+      --dots: rgba(255, 255, 255, 0.045);
+      --shadow: 0 12px 32px rgba(0,0,0,0.35);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background:
+    radial-gradient(circle at 1px 1px, var(--dots) 1.2px, transparent 0) 0 0 / 22px 22px,
+    radial-gradient(760px 520px at 0% 0%, var(--blob-1), transparent 70%),
+    radial-gradient(680px 520px at 100% 8%, var(--blob-2), transparent 70%),
+    radial-gradient(900px 600px at 50% 110%, var(--blob-3), transparent 70%), var(--bg); background-attachment: fixed; color: var(--ink); font-family: "Figtree", "Helvetica Neue", Arial, sans-serif; line-height: 1.5; }
+  h1, h2, h3 { font-family: "Unbounded", "Figtree", sans-serif; letter-spacing: -0.01em; }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--basil); outline-offset: 2px; }
+  .sr { position: absolute; left: -9999px; }
+  .app { display: flex; flex-direction: column; height: 100vh; }
+
+  /* header */
+  header { display: flex; align-items: center; gap: 0.8rem; padding: 0.75rem clamp(1rem, 3vw, 2rem);
+    background: color-mix(in srgb, var(--surface) 78%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);
+    position: relative; }
+  header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--grad-brand); opacity: 0.9; }
+  .logo { width: 42px; height: 42px; border-radius: 13px; background: var(--grad-brand); color: #fff;
+    display: grid; place-items: center; flex: none; box-shadow: 0 6px 18px rgba(239, 75, 108, 0.35); }
+  .brand h1 { background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .brand h1 { margin: 0; font-size: 1.25rem; font-weight: 700; line-height: 1.15; }
+  .brand p { margin: 0; color: var(--muted); font-size: 0.86rem; }
+  .head-right { margin-left: auto; display: flex; gap: 0.5rem; }
+  .pill { display: inline-flex; align-items: center; gap: 0.45rem; white-space: nowrap; font-size: 0.84rem;
+    border: 1px solid var(--line-2); border-radius: 999px; padding: 0.38rem 0.8rem; background: var(--surface-2); }
+  .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--basil); }
+  .pill.demo .dot { background: var(--saffron-dot); }
+  .diet-btn { cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; white-space: nowrap; font-size: 0.84rem; font-weight: 600;
+    border: 1px solid transparent; border-radius: 999px; padding: 0.38rem 0.85rem; background: var(--sky-soft); color: var(--sky); }
+  .diet-btn:hover { border-color: var(--sky); }
+  .diet-btn.none { background: var(--surface-2); color: var(--muted); border-color: var(--line-2); }
+  .pill button { background: none; border: 0; padding: 0; cursor: pointer; color: var(--saffron); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+  /* thread */
+  .thread { flex: 1; overflow-y: auto; padding: 1.5rem clamp(0.8rem, 3vw, 2rem) 1rem; }
+  .inner { max-width: 920px; margin: 0 auto; }
+  .msg { display: flex; gap: 0.75rem; margin-bottom: 1.4rem; animation: rise 0.28s ease-out both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+  .msg.user { justify-content: flex-end; }
+  .avatar { width: 36px; height: 36px; border-radius: 11px; background: var(--grad-brand); box-shadow: 0 4px 12px rgba(239, 75, 108, 0.3); color: #fff; display: grid; place-items: center; flex: none; }
+  .stack { display: flex; flex-direction: column; gap: 0.6rem; min-width: 0; flex: 1; max-width: 820px; }
+  .user .stack { align-items: flex-end; flex: initial; }
+  .bubble { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--saffron-dot); border-radius: 4px 18px 18px 18px; padding: 0.75rem 1rem; box-shadow: var(--shadow); }
+  .user .bubble { background: var(--grad-user); box-shadow: 0 6px 16px rgba(14, 138, 98, 0.25); color: #fff; border: 0; border-radius: 18px 4px 18px 18px; white-space: pre-wrap; max-width: 560px; box-shadow: none; }
+
+  .bubble p { margin: 0 0 0.5rem; } .bubble p:last-child { margin-bottom: 0; }
+  .bubble ul, .bubble ol { margin: 0.2rem 0 0.5rem; padding-left: 1.2rem; }
+  .bubble.err { border-color: var(--tomato); color: var(--tomato); }
+  .tools { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .tool { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.77rem; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 0.15rem 0.65rem; }
+  .tool svg { color: var(--basil); } .tool.fail svg { color: var(--tomato); }
+
+  /* cards */
+  .card { --accent: var(--basil); background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent);
+    border-radius: var(--radius); padding: 1.05rem 1.15rem; box-shadow: var(--shadow); }
+  .card.k-recipes, .card.k-recipe { --accent: var(--saffron-dot); } .card.k-recalls { --accent: var(--tomato); }
+  .card.k-diet { --accent: var(--sky); } .card.hero { border-top: 0; }
+  .card-head svg { color: var(--accent) !important; }
+  .card-head { display: flex; align-items: center; gap: 0.55rem; flex-wrap: wrap; margin-bottom: 0.2rem; }
+  .card-head h2 { margin: 0; font-size: 1.02rem; font-weight: 600; }
+  .card-head svg { color: var(--basil); flex: none; }
+  .sub { color: var(--muted); font-size: 0.88rem; margin: 0 0 0.8rem; }
+  .section-label { font-size: 0.8rem; font-weight: 700; color: var(--muted); margin: 0.9rem 0 0.45rem; }
+  .foot { color: var(--faint); font-size: 0.8rem; margin: 0.8rem 0 0; }
+
+  /* welcome */
+  .hero { background: var(--grad-hero), var(--surface); position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--grad-brand); }
+  .hero h2 { font-size: clamp(1.25rem, 2.6vw, 1.6rem); font-weight: 700; margin: 0 0 0.3rem; }
+  .hero p.lead { margin: 0 0 1rem; color: var(--muted); }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin-bottom: 1rem; }
+  .stat { background: color-mix(in srgb, var(--surface) 80%, transparent); border: 1px solid var(--line); border-radius: 14px; padding: 0.65rem 0.8rem; }
+  .stat b { color: var(--basil); } .stat.plum b { color: var(--sky); }
+  .stat b { display: block; font-family: "Unbounded", sans-serif; font-size: 1.35rem; font-weight: 600; line-height: 1.2; }
+  .stat span { font-size: 0.8rem; color: var(--muted); }
+  .stat.warn b { color: var(--tomato); } .stat.spice b { color: var(--saffron); }
+  .ideas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.55rem; }
+  .idea { --tint: var(--basil-soft); cursor: pointer; text-align: left; display: flex; gap: 0.65rem; align-items: flex-start; padding: 0.75rem 0.8rem;
+    border-radius: 14px; border: 1px solid var(--line); background: var(--surface); transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s; }
+  .idea .em { width: 38px; height: 38px; flex: none; display: grid; place-items: center; border-radius: 11px; background: var(--tint); }
+  .idea:nth-child(2) { --tint: var(--saffron-soft); } .idea:nth-child(3) { --tint: var(--sky-soft); } .idea:nth-child(4) { --tint: var(--tomato-soft); }
+  .idea:hover { border-color: var(--line-2); transform: translateY(-2px); box-shadow: var(--shadow); }
+  .idea .em { font-size: 1.35rem; line-height: 1; }
+  .idea b { display: block; font-size: 0.9rem; } .idea small { color: var(--muted); font-size: 0.8rem; line-height: 1.35; display: block; }
+
+  /* diet */
+  .diet-card .chips { margin-top: 0.5rem; }
+  dialog { border: 1px solid var(--line); border-radius: 20px; padding: 0; width: min(480px, calc(100vw - 2rem)); background: var(--surface); color: var(--ink); box-shadow: 0 24px 60px rgba(0,0,0,0.25); }
+  dialog::backdrop { background: rgba(10, 20, 14, 0.4); backdrop-filter: blur(2px); }
+  form.dlg { display: block; padding: 1.2rem 1.25rem 1.1rem; }
+  .dlg h2 { margin: 0 0 0.2rem; font-size: 1.1rem; }
+  .opts { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .opt { cursor: pointer; border: 1px solid var(--line-2); background: var(--surface-2); border-radius: 999px; padding: 0.4rem 0.8rem; font-size: 0.87rem; font-weight: 600; }
+  .opt[aria-pressed="true"] { background: var(--grad-user); border-color: transparent; color: #fff; }
+  .opt .h { display: block; font-weight: 500; font-size: 0.74rem; opacity: 0.8; }
+  .dlg input { width: 100%; font: inherit; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 12px; padding: 0.6rem 0.8rem; }
+  .dlg input:focus { outline: none; border-color: var(--basil); }
+  .dlg-actions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1rem; }
+
+  /* pantry */
+  .soon-row { display: grid; grid-template-columns: auto 1fr auto; gap: 0.7rem; align-items: center; padding: 0.55rem 0.7rem;
+    border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); margin-bottom: 0.4rem; }
+  .badge { font-size: 0.74rem; font-weight: 700; padding: 0.15rem 0.55rem; border-radius: 999px; white-space: nowrap; }
+  .badge.soon { background: var(--saffron-soft); color: var(--saffron); }
+  .badge.expired { background: var(--tomato-soft); color: var(--tomato); }
+  .badge.ok { background: var(--basil-soft); color: var(--basil-ink); }
+  .badge.no_date { background: var(--surface-2); color: var(--faint); border: 1px solid var(--line); }
+  .soon-row .nm { font-weight: 600; }
+  .soon-row .qty { color: var(--muted); font-size: 0.86rem; font-weight: 500; }
+  .used { cursor: pointer; border: 1px solid var(--line-2); background: var(--surface); border-radius: 9px; padding: 0.3rem 0.7rem; font-size: 0.82rem; font-weight: 600; }
+  .used:hover { border-color: var(--basil); color: var(--basil-ink); }
+  .rack { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 0.55rem; }
+  .jar { position: relative; text-align: center; padding: 0.55rem 0.35rem 0.45rem; border-radius: 12px 12px 16px 16px; background: var(--surface-2); border: 1px solid var(--line); }
+  .jar .lid { height: 8px; width: 62%; margin: -0.55rem auto 0.45rem; border-radius: 0 0 6px 6px; background: var(--c, var(--basil)); }
+  .jar .dot { width: 30px; height: 30px; border-radius: 50%; margin: 0 auto 0.3rem; background: var(--c, var(--basil)); box-shadow: inset 0 -4px 0 rgba(0,0,0,0.12); }
+  .jar b { display: block; font-size: 0.8rem; line-height: 1.2; } .jar small { font-size: 0.7rem; color: var(--faint); }
+  .jar .x { position: absolute; top: 4px; right: 4px; border: 0; background: none; cursor: pointer; color: var(--faint); font-size: 0.8rem; border-radius: 50%; }
+  .jar .x:hover { color: var(--basil-ink); background: var(--basil-soft); }
+  .jar.soon small { color: var(--saffron); font-weight: 700; } .jar.expired small { color: var(--tomato); font-weight: 700; }
+  .cats { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0.6rem 1rem; }
+  .cat h3 { font-family: "Figtree", sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--muted); margin: 0 0 0.35rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  .chip { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.82rem; padding: 0.18rem 0.3rem 0.18rem 0.6rem;
+    border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); }
+  .chip .d { font-size: 0.72rem; color: var(--faint); }
+  .chip .x { border: 0; background: none; cursor: pointer; color: var(--faint); padding: 0 0.25rem; border-radius: 50%; line-height: 1; font-size: 0.9rem; }
+  .chip .x:hover { color: var(--basil-ink); background: var(--basil-soft); }
+  .chip.plain { padding-right: 0.6rem; }
+  .chip.have { background: var(--basil-soft); border-color: transparent; color: var(--basil-ink); }
+  .chip.miss { background: transparent; border: 1px dashed var(--line-2); color: var(--muted); }
+  .chip.exp { background: var(--tomato-soft); border-color: transparent; color: var(--tomato); }
+  .mark { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; font-weight: 700; padding: 0.16rem 0.55rem 0.16rem 0.4rem;
+    border-radius: 999px; --m: #1E9E4A; color: var(--m); background: color-mix(in srgb, var(--m) 12%, var(--surface)); }
+  .mark i { width: 13px; height: 13px; border: 2px solid var(--m); border-radius: 3px; display: grid; place-items: center; }
+  .mark i::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--m); }
+  .mark.egg { --m: #D99A00; } .mark.nonveg { --m: #B3261E; } .mark.other { --m: #6B5B55; }
+  .mark.nonveg i::after { border-radius: 0; width: 0; height: 0; background: none; border-left: 3.5px solid transparent;
+    border-right: 3.5px solid transparent; border-bottom: 6px solid var(--m); }
+  @media (prefers-color-scheme: dark) { .mark { --m: #4ADE80; } .mark.egg { --m: #FACC15; } .mark.nonveg { --m: #F87171; } }
+  .chip.diet { background: var(--sky-soft); border-color: transparent; color: var(--sky); font-weight: 600; }
+
+  /* recipes */
+  .rgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 0.75rem; }
+  .rtile { border: 1px solid var(--line); border-radius: 14px; padding: 0.9rem; background: var(--surface-2); display: flex; flex-direction: column; gap: 0.5rem; }
+  .rtile { position: relative; transition: border-color 0.15s, box-shadow 0.15s; }
+  .rtile:hover { border-color: var(--line-2); box-shadow: var(--shadow); }
+  .rtop { display: flex; gap: 0.65rem; align-items: center; }
+  .dish { width: 42px; height: 42px; flex: none; border-radius: 12px; display: grid; place-items: center; font-size: 1.35rem;
+    background: linear-gradient(135deg, var(--saffron-soft), var(--tomato-soft)); }
+  .rtile:nth-child(2) .dish { background: linear-gradient(135deg, var(--basil-soft), var(--sky-soft)); }
+  .rtile:nth-child(3) .dish { background: linear-gradient(135deg, var(--tomato-soft), var(--sky-soft)); }
+  .rtile:nth-child(4) .dish { background: linear-gradient(135deg, var(--haldi-soft), var(--basil-soft)); }
+  .rtile h3 { margin: 0; font-size: 0.96rem; font-weight: 600; line-height: 1.3; }
+  .fit { font-size: 0.76rem; font-weight: 700; border-radius: 999px; padding: 0.12rem 0.55rem; align-self: flex-start; }
+  .fit.ok { background: var(--basil-soft); color: var(--basil-ink); } .fit.no { background: var(--tomato-soft); color: var(--tomato); }
+  .meta { display: flex; flex-wrap: wrap; gap: 0.2rem 0.8rem; font-size: 0.83rem; color: var(--muted); }
+  .meta span { display: inline-flex; align-items: center; gap: 0.3rem; }
+  .meter { display: flex; align-items: center; gap: 0.55rem; font-size: 0.83rem; font-weight: 600; }
+  .meter .t { flex: 1; height: 7px; border-radius: 999px; background: var(--line); overflow: hidden; }
+  .meter .t i { display: block; height: 100%; background: linear-gradient(90deg, var(--saffron-dot), var(--basil)); border-radius: inherit; }
+  .expiring { font-size: 0.8rem; font-weight: 700; color: var(--saffron); background: var(--saffron-soft); border-radius: 8px; padding: 0.2rem 0.55rem; align-self: flex-start; }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; }
+  .btn { cursor: pointer; border-radius: 10px; padding: 0.38rem 0.75rem; font-size: 0.84rem; font-weight: 600; border: 1px solid var(--line-2); background: var(--surface); }
+  .btn:hover { border-color: var(--basil); color: var(--basil-ink); }
+  .btn.primary { background: var(--basil); color: #fff; border-color: var(--basil); }
+  .btn.primary:hover { filter: brightness(1.08); color: #fff; }
+  @media (prefers-color-scheme: dark) { .btn.primary { color: #0D1F14; } .btn.primary:hover { color: #0D1F14; } }
+
+  .recipe-body { display: grid; grid-template-columns: minmax(200px, 0.8fr) 1.2fr; gap: 1.4rem; margin-top: 0.8rem; }
+  .ing { list-style: none; margin: 0; padding: 0; }
+  .ing li { display: flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0; border-bottom: 1px dashed var(--line); font-size: 0.93rem; }
+  .ing .mk { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; flex: none; font-size: 0.75rem; font-weight: 800; }
+  .ing .have .mk { background: var(--basil-soft); color: var(--basil-ink); }
+  .ing .miss .mk { border: 1.5px dashed var(--line-2); }
+  .ing .exp .mk { background: var(--tomato-soft); color: var(--tomato); }
+  .ing .staple { color: var(--muted); }
+  .ing .staple .mk { background: var(--surface-2); color: var(--faint); }
+  .steps { margin: 0; padding-left: 1.3rem; }
+  .steps li { margin-bottom: 0.55rem; }
+  .steps li::marker { font-family: "Unbounded", sans-serif; font-weight: 600; color: var(--basil); }
+
+  /* recalls */
+  .recall { border: 1px solid var(--line); border-left: 4px solid var(--tomato); border-radius: 12px; padding: 0.8rem 0.9rem; margin-bottom: 0.55rem; background: var(--surface-2); }
+  .recall.check { border-left-color: var(--saffron-dot); }
+  .recall .top { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.35rem; }
+  .recall .item { font-weight: 700; }
+  .recall .product { margin: 0 0 0.3rem; font-size: 0.92rem; }
+  .recall .why { margin: 0; font-size: 0.87rem; color: var(--muted); }
+  .clear-ok { display: flex; gap: 0.7rem; align-items: center; padding: 0.8rem; border-radius: 12px; background: var(--basil-soft); color: var(--basil-ink); font-weight: 600; }
+  .note { font-size: 0.86rem; color: var(--muted); margin-top: 0.7rem; }
+
+  .typing { display: inline-flex; gap: 5px; padding: 0.95rem 1rem; }
+  .typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--basil); opacity: 0.3; animation: blink 1.2s infinite; }
+  .typing i:nth-child(2) { animation-delay: 0.2s; } .typing i:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes blink { 50% { opacity: 1; } }
+
+  /* composer */
+  footer { padding: 0.7rem clamp(0.8rem, 3vw, 2rem) 1rem; border-top: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 85%, transparent); backdrop-filter: blur(14px); }
+  .composer { max-width: 920px; margin: 0 auto; }
+  .quick { display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.6rem; scrollbar-width: none; }
+  .quick button { flex: none; display: inline-flex; align-items: center; gap: 0.4rem; cursor: pointer; font-size: 0.86rem;
+    background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 999px; padding: 0.42rem 0.9rem; }
+  .quick button:hover { border-color: var(--basil); }
+  .quick button { --c: var(--basil); } .quick button:nth-child(2) { --c: var(--saffron); } .quick button:nth-child(3) { --c: var(--tomato); }
+  .quick button:nth-child(4) { --c: var(--haldi); } .quick button:nth-child(5) { --c: var(--sky); } .quick button:nth-child(6) { --c: var(--basil); }
+  .quick svg { color: var(--c); } .quick button:hover { border-color: var(--c); background: color-mix(in srgb, var(--c) 10%, var(--surface)); }
+  form { display: flex; gap: 0.55rem; align-items: flex-end; }
+  textarea#input { flex: 1; resize: none; max-height: 150px; font: inherit; font-size: 1rem; color: var(--ink);
+    background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 14px; padding: 0.8rem 1rem; }
+  textarea#input:focus { outline: none; border-color: var(--basil); }
+  textarea::placeholder { color: var(--faint); }
+  .send { display: inline-flex; align-items: center; gap: 0.45rem; cursor: pointer; font-weight: 700; background: var(--grad-brand); color: #fff;
+    box-shadow: 0 6px 16px rgba(239, 75, 108, 0.3);
+    border: 0; border-radius: 14px; padding: 0.8rem 1.2rem; }
+
+  .send:disabled { opacity: 0.5; cursor: progress; }
+  .fine { text-align: center; color: var(--faint); font-size: 0.75rem; margin: 0.5rem 0 0; }
+
+  .toast { position: fixed; left: 50%; bottom: 7.5rem; transform: translateX(-50%); background: var(--ink); color: var(--bg);
+    padding: 0.5rem 0.9rem; border-radius: 10px; font-size: 0.88rem; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+  .toast.on { opacity: 1; }
+
+  @media (max-width: 720px) {
+    .brand p, .plong { display: none; }
+    .avatar { display: none; }
+    .recipe-body { grid-template-columns: 1fr; gap: 0.8rem; }
+    .send span { display: none; }
+    .stats, .ideas { grid-template-columns: repeat(2, 1fr); }
+    header { gap: 0.55rem; } .head-right { gap: 0.35rem; }
+    .brand h1 { font-size: 1.1rem; }
+    .diet-btn .lbl { max-width: 9ch; overflow: hidden; text-overflow: ellipsis; }
+    .soon-row { grid-template-columns: 1fr auto; gap: 0.25rem 0.6rem; }
+    .soon-row .badge { grid-column: 1; justify-self: start; }
+    .soon-row .used { grid-column: 2; grid-row: 1 / span 2; }
+  }
+  @media (max-width: 440px) { .logo { display: none; } .pill, .diet-btn { padding: 0.36rem 0.65rem; } }
+  @media (prefers-reduced-motion: reduce) { .typing i { animation: none; opacity: 0.7; } .toast, .idea { transition: none; } .msg { animation: none; } }
+
+  /* ================================================================ "wow" layer
+     Aurora background + frosted glass + vivid gradients. Colors: marigold, pomegranate, violet, mint. */
+  :root {
+    --a1: #FFB23F; --a2: #FF4F8B; --a3: #8B5CF6; --a4: #22C9A0;
+    --base: #FFF4EA;
+    --glass: rgba(255, 255, 255, 0.74); --glass-2: rgba(255, 255, 255, 0.58); --glass-line: rgba(255, 255, 255, 0.75);
+    --vivid: linear-gradient(135deg, #FF9A1F 0%, #FF4F8B 48%, #8B5CF6 100%);
+    --vivid-2: linear-gradient(135deg, #8B5CF6 0%, #FF4F8B 100%);
+    --aurora-opacity: 0.55;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --base: #0E0A1A;
+      --glass: rgba(30, 22, 48, 0.72); --glass-2: rgba(38, 29, 60, 0.6); --glass-line: rgba(255, 255, 255, 0.09);
+      --aurora-opacity: 0.38;
+    }
+  }
+  body { background: var(--base); }
+  .aurora { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+  .aurora i { position: absolute; width: 52vmax; height: 52vmax; border-radius: 50%; filter: blur(70px); opacity: var(--aurora-opacity); }
+  .aurora i:nth-child(1) { background: var(--a1); top: -18vmax; left: -12vmax; animation: drift1 22s ease-in-out infinite alternate; }
+  .aurora i:nth-child(2) { background: var(--a2); top: -10vmax; right: -16vmax; animation: drift2 26s ease-in-out infinite alternate; }
+  .aurora i:nth-child(3) { background: var(--a3); bottom: -22vmax; left: 18vmax; animation: drift3 30s ease-in-out infinite alternate; }
+  .aurora i:nth-child(4) { background: var(--a4); bottom: -24vmax; right: -10vmax; width: 40vmax; height: 40vmax; animation: drift1 28s ease-in-out infinite alternate-reverse; }
+  .aurora::after { content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.35) 1px, transparent 0) 0 0 / 24px 24px; mix-blend-mode: overlay; }
+  @keyframes drift1 { to { transform: translate(14vmax, 10vmax) scale(1.12); } }
+  @keyframes drift2 { to { transform: translate(-12vmax, 14vmax) scale(0.9); } }
+  @keyframes drift3 { to { transform: translate(10vmax, -12vmax) scale(1.15); } }
+
+  /* frosted glass surfaces */
+  header, footer { background: var(--glass) !important; backdrop-filter: blur(18px) saturate(170%); -webkit-backdrop-filter: blur(18px) saturate(170%); border-color: var(--glass-line) !important; }
+  header::after { background: var(--vivid); height: 3px; }
+  .card, .bubble, .rtile, .soon-row, .jar, .stat, .idea, .recall, .quick button, textarea#input, .pill, .diet-btn.none {
+    background-color: var(--glass) !important; backdrop-filter: blur(16px) saturate(160%); -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border-color: var(--glass-line) !important; }
+  .card { box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset, 0 18px 40px -12px rgba(139, 92, 246, 0.22), 0 8px 20px -10px rgba(255, 79, 139, 0.18); }
+  @media (prefers-color-scheme: dark) { .card { box-shadow: 0 18px 44px -14px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04); } }
+  .card { border-top: 0 !important; position: relative; }
+  .card::before { content: ""; position: absolute; left: 18px; right: 18px; top: 0; height: 3px; border-radius: 0 0 3px 3px; background: var(--accent-grad, var(--vivid)); }
+  .card.k-pantry { --accent-grad: linear-gradient(90deg, #22C9A0, #1FA2FF); }
+  .card.k-recipes, .card.k-recipe { --accent-grad: linear-gradient(90deg, #FFB23F, #FF4F8B); }
+  .card.k-recalls { --accent-grad: linear-gradient(90deg, #FF4F8B, #E11D48); }
+  .card.k-diet { --accent-grad: linear-gradient(90deg, #8B5CF6, #FF4F8B); }
+
+  /* brand */
+  .logo, .avatar { background: var(--vivid); box-shadow: 0 8px 22px -6px rgba(255, 79, 139, 0.6); }
+  .brand h1 { background: var(--vivid); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .msg.bot .typing { box-shadow: 0 0 0 2px transparent; }
+  .typing i { background: var(--a2); }
+  .typing i:nth-child(2) { background: var(--a1); } .typing i:nth-child(3) { background: var(--a3); }
+
+  /* chat bubbles */
+  .user .bubble { background: var(--vivid-2) !important; box-shadow: 0 10px 24px -10px rgba(139, 92, 246, 0.7); border: 0 !important; }
+  .bot .bubble { border-left: 0 !important; position: relative; }
+  .bot .bubble::before { content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px; border-radius: 3px; background: var(--vivid); }
+  .tool { background: var(--glass-2); border-color: var(--glass-line); }
+
+  /* hero: bold gradient */
+  .card.hero { background: var(--vivid) !important; color: #fff; border: 0 !important;
+    box-shadow: 0 24px 50px -18px rgba(255, 79, 139, 0.55), 0 12px 30px -16px rgba(139, 92, 246, 0.6); overflow: hidden; }
+  .card.hero::before { display: none; }
+  .card.hero::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(420px 220px at 90% -10%, rgba(255,255,255,0.35), transparent 70%),
+                radial-gradient(360px 200px at 0% 120%, rgba(255,255,255,0.22), transparent 70%); }
+  .card.hero h2, .card.hero .lead, .card.hero .lead strong { color: #fff; position: relative; z-index: 1; }
+  .card.hero .lead { opacity: 0.92; }
+  .card.hero .stats, .card.hero .ideas { position: relative; z-index: 1; }
+  .card.hero .stat { background: rgba(255,255,255,0.18) !important; border-color: rgba(255,255,255,0.35) !important; }
+  .card.hero .stat b, .card.hero .stat span { color: #fff !important; }
+  .card.hero .stat span { opacity: 0.9; }
+  .card.hero .idea { background: rgba(255,255,255,0.92) !important; border-color: transparent !important; }
+  .card.hero .idea b { color: var(--ink); } .card.hero .idea small { color: var(--muted); }
+  @media (prefers-color-scheme: dark) { .card.hero .idea { background: rgba(24, 16, 40, 0.82) !important; } }
+  .card.hero .idea:hover { transform: translateY(-3px) scale(1.01); box-shadow: 0 14px 28px -12px rgba(0,0,0,0.35); }
+
+  /* recipe tiles */
+  .rtile { position: relative; overflow: hidden; }
+  .rtile::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: linear-gradient(90deg, #FFB23F, #FF4F8B); }
+  .rtile:nth-child(2)::before { background: linear-gradient(90deg, #22C9A0, #1FA2FF); }
+  .rtile:nth-child(3)::before { background: linear-gradient(90deg, #8B5CF6, #FF4F8B); }
+  .rtile:nth-child(4)::before { background: linear-gradient(90deg, #FF9A1F, #22C9A0); }
+  .rtile:hover { transform: translateY(-2px); box-shadow: 0 16px 32px -16px rgba(139, 92, 246, 0.45); }
+  .dish { box-shadow: 0 6px 14px -6px rgba(255, 79, 139, 0.45); }
+  .meter .t i { background: linear-gradient(90deg, #FFB23F, #FF4F8B, #8B5CF6); }
+  .btn.primary { background: var(--vivid-2); border: 0; color: #fff !important; box-shadow: 0 8px 18px -8px rgba(139, 92, 246, 0.7); }
+  .btn.primary:hover { filter: brightness(1.08) saturate(1.1); }
+
+  /* composer */
+  .quick button { border-color: color-mix(in srgb, var(--c) 35%, transparent) !important; }
+  .quick button:hover { background: color-mix(in srgb, var(--c) 16%, var(--surface)) !important; transform: translateY(-1px); }
+  .send { background: linear-gradient(120deg, #FF9A1F, #FF4F8B, #8B5CF6, #FF9A1F); background-size: 300% 100%; animation: shimmer 8s linear infinite;
+    box-shadow: 0 10px 24px -8px rgba(255, 79, 139, 0.6); }
+  @keyframes shimmer { to { background-position: 300% 0; } }
+  textarea#input:focus { border-color: var(--a3) !important; box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15); }
+  .diet-btn:not(.none) { background: var(--vivid-2); color: #fff; box-shadow: 0 6px 16px -6px rgba(139, 92, 246, 0.6); }
+
+  @media (prefers-reduced-motion: reduce) { .aurora i, .send { animation: none; } .rtile:hover, .idea:hover { transform: none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-logo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M8 8V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V8M6.5 8h11l-.8 11.2a2 2 0 0 1-2 1.8H9.3a2 2 0 0 1-2-1.8zM12 17c-2 0-3-1.5-3-3 2 0 3 1 3 3zm0 0c0-2 1-3.5 3-3.5 0 1.8-1 3.5-3 3.5z"/></symbol>
+  <symbol id="i-basket" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 10h16l-1.5 9a2 2 0 0 1-2 1.7h-9a2 2 0 0 1-2-1.7zM8 10l3-6M16 10l-3-6M9 14v3M15 14v3M12 14v3"/></symbol>
+  <symbol id="i-pot" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 10h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zM2 10h2M20 10h2M9 6c0-1.5 1-1.5 1-3M14 6c0-1.5 1-1.5 1-3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7v5l3 2"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15M5 19l7-7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l8 3v6c0 4.6-3.4 8.3-8 9-4.6-.7-8-4.4-8-9V6zM9 12l2 2 4-4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-hourglass" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 3h12M6 21h12M7 3c0 5 10 5 10 9s-10 4-10 9M17 3c0 5-10 5-10 9s10 4 10 9"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" d="M12 8c4.4 0 8-1.3 8-3s-3.6-3-8-3-8 1.3-8 3 3.6 3 8 3zM4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM2.5 20a6.5 6.5 0 0 1 13 0M16 4.2a3.5 3.5 0 0 1 0 6.6M18.5 14.5A6.5 6.5 0 0 1 21.5 20"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M4 12l16-8-6 16-3-7z"/></symbol>
+</svg>
+
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="app">
+  <header>
+    <div class="logo" aria-hidden="true"><svg width="22" height="22"><use href="#i-logo"/></svg></div>
+    <div class="brand"><h1>PantryPal</h1><p>Cook what you have, waste less</p></div>
+    <div class="head-right"><button class="diet-btn none" id="dietBtn" type="button" aria-haspopup="dialog">🥗 <span class="lbl" id="dietText">Set diet</span></button><span class="pill" id="data" role="status"><span class="dot" aria-hidden="true"></span><span id="dataText">Loading…</span></span></div>
+  </header>
+
+  <main class="thread" id="thread"><div class="inner" id="messages"></div></main>
+
+  <footer>
+    <div class="composer">
+      <div class="quick" id="quick" aria-label="Quick questions"></div>
+      <form id="form">
+        <label for="input" class="sr">Message PantryPal</label>
+        <textarea id="input" rows="1" placeholder="Ask what to cook, or tell me what you bought…"></textarea>
+        <button class="send" id="send" type="submit"><span>Send</span><svg width="18" height="18"><use href="#i-send"/></svg></button>
+      </form>
+      <p class="fine">Diet labels and recall matches can be wrong. Check package labels, especially for allergies.</p>
+    </div>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<dialog id="dietDlg" aria-labelledby="dietTitle">
+  <form method="dialog" class="dlg" id="dietForm">
+    <h2 id="dietTitle">Your diet</h2>
+    <p class="sub">Every recipe suggestion follows this. You can also just tell me, like "I'm vegetarian", "we eat eggs but no meat" or "we eat chicken".</p>
+    <div class="section-label">I eat</div>
+    <div class="opts" id="dietMain"></div>
+    <div class="section-label">Also</div>
+    <div class="opts" id="dietAlso"></div>
+    <div class="section-label"><label for="avoidIn">Leave out these ingredients</label></div>
+    <input id="avoidIn" placeholder="e.g. mushroom, coconut, beef" autocomplete="off">
+    <div class="dlg-actions">
+      <button class="btn" value="cancel" type="submit">Cancel</button>
+      <button class="btn primary" value="save" type="submit" id="dietSave">Save diet</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+const QUICK = [
+  ["i-basket", "My pantry", "What's in my pantry?"],
+  ["i-pot", "Cook tonight", "What can I cook tonight with what I have?"],
+  ["i-hourglass", "Use it up", "What should I cook to use up food that expires soon?"],
+  ["i-leaf", "Spice rack", "What spices and masalas do I have?"],
+  ["i-shield", "Check recalls", "Is anything in my pantry recalled?"],
+  ["i-plus", "Add groceries", "I bought palak, 200 g paneer, a kilo of tomatoes and a box of haldi"],
+];
+const IDEAS = [
+  ["🍛", "Dinner from my pantry", "Ranked by what you already have", "What can I cook tonight with what I have?"],
+  ["⏳", "Use it before it spoils", "Recipes for food that expires soon", "What should I cook to use up food that expires soon?"],
+  ["🥚", "High-protein breakfast", "Pesarattu, chilla, ragi idli…", "A high-protein breakfast with eggs or dal"],
+  ["🛡️", "Check FDA recalls", "Your pantry vs a year of recalls", "Is anything in my pantry recalled?"],
+];
+const TZ = (() => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone; } catch { return null; } })();
+const DIET_NAMES = { vegetarian: "Vegetarian", eggetarian: "Eggetarian", non_veg: "Non-veg (chicken & eggs)",
+  gluten_free: "Gluten-free", dairy_free: "Dairy-free", nut_free: "Nut-free" };
+const DIET_MAIN = [["vegetarian", "🟢 Vegetarian", "no meat, fish or egg"], ["eggetarian", "🟡 Eggetarian", "vegetarian + eggs"],
+  ["non_veg", "🔴 Non-veg", "chicken & eggs"]];
+const DIET_ALSO = [["gluten_free", "Gluten-free"], ["dairy_free", "Dairy-free"], ["nut_free", "Nut-free"]];
+const SPICE_COLORS = [[/turmeric|haldi/, "#E3A80B"], [/cumin|jeera/, "#9A6B3F"], [/chil|mirch|paprika/, "#C2412B"],
+  [/coriander|dhania/, "#8C9A55"], [/garam|masala/, "#7A4B2A"], [/mustard|rai/, "#B8902A"], [/hing|asafoetida/, "#CDBB92"],
+  [/cardamom|elaichi/, "#7FA36B"], [/pepper/, "#3E3A36"], [/cinnamon|dalchini/, "#A0522D"], [/clove|laung/, "#5B3A29"],
+  [/fenugreek|methi/, "#C9A227"], [/ajwain|carom|fennel|saunf/, "#A8A16A"]];
+const spiceColor = (n) => (SPICE_COLORS.find(([rx]) => rx.test(n.toLowerCase())) || [0, "#2D7A4B"])[1];
+const DISH = [[/soup/, "🍲"], [/chai|tea|ganji/, "☕"], [/laddoo/, "🍡"], [/pudding/, "🍮"], [/chutney/, "🥣"], [/apple/, "🍎"],
+  [/walnut|almond|brazil|makhana|cracker|chickpeas$/, "🌰"], [/toast|sourdough/, "🍞"], [/idli|dosa|pesarattu|roti|mudde|wrap/, "🫓"], [/chaat/, "🥗"], [/omelette|egg|anda|shakshuka|migas/, "🥚"], [/chilla|pancake|paratha/, "🫓"], [/poha|upma|oats|bowl/, "🥣"],
+  [/rice|pulao|khichdi|risotto|chawal/, "🍚"], [/dal|curry|masala|paneer|rajma|chana|gobi|bhindi|sabzi/, "🍛"],
+  [/pasta|noodle/, "🍝"], [/soup/, "🍲"], [/salad/, "🥗"], [/wrap|quesadilla|fajita/, "🌮"], [/chicken/, "🍗"], [/pepper/, "🫑"]];
+const dishIcon = (t) => (DISH.find(([rx]) => rx.test(t.toLowerCase())) || [0, "🍽️"])[1];
+let DIET = { diets: [], avoid: [], names: [] };
+const $ = (id) => document.getElementById(id);
+const history = [];
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const icon = (id, size = 16) => `<svg width="${size}" height="${size}" aria-hidden="true"><use href="#${id}"/></svg>`;
+
+function md(src) {
+  const inline = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/(^|\W)\*(?!\s)(.+?)\*(?=\W|$)/g, "$1<em>$2</em>");
+  const out = []; let list = null;
+  for (const raw of String(src).split("\n")) {
+    const line = raw.trim();
+    const ul = line.match(/^[-*•]\s+(.*)/), ol = line.match(/^\d+[.)]\s+(.*)/);
+    const kind = ul ? "ul" : ol ? "ol" : null;
+    if (kind) { if (list !== kind) { if (list) out.push(`</${list}>`); out.push(`<${kind}>`); list = kind; } out.push(`<li>${inline((ul || ol)[1])}</li>`); }
+    else { if (list) { out.push(`</${list}>`); list = null; } if (line) out.push(`<p>${inline(line)}</p>`); }
+  }
+  if (list) out.push(`</${list}>`);
+  return out.join("");
+}
+
+function toast(text) { const t = $("toast"); t.textContent = text; t.classList.add("on"); setTimeout(() => t.classList.remove("on"), 1800); }
+async function copy(text, what) {
+  try { await navigator.clipboard.writeText(text); toast(`${what} copied`); } catch { toast("Couldn't copy"); }
+}
+
+// ---------------------------------------------------------------- pantry
+function fmtQty(i) {
+  if (i.quantity == null) return "";
+  const q = Number.isInteger(i.quantity) ? i.quantity : i.quantity.toFixed(1).replace(/\.0$/, "");
+  return `${q}${i.unit ? " " + i.unit : ""}`;
+}
+function expiryText(i) {
+  if (i.days_left == null) return "no date";
+  if (i.days_left < 0) return i.days_left === -1 ? "expired yesterday" : `expired ${-i.days_left} days ago`;
+  if (i.days_left === 0) return "use today";
+  if (i.days_left === 1) return "1 day left";
+  if (i.days_left <= 30) return `${i.days_left} days left`;
+  return `${Math.round(i.days_left / 30)} mo`;
+}
+
+function pantryCard(c) {
+  const isSpice = (i) => i.category === "Spices & masalas";
+  const soon = c.items.filter((i) => !isSpice(i) && (i.freshness === "soon" || i.freshness === "expired"));
+  const spices = c.items.filter(isSpice);
+  const rest = c.items.filter((i) => !soon.includes(i) && !isSpice(i));
+  const groups = {};
+  rest.forEach((i) => (groups[i.category] ||= []).push(i));
+  const rack = spices.map((i) => `
+      <div class="jar ${i.freshness}" style="--c:${spiceColor(i.name)}"><div class="lid"></div><div class="dot"></div>
+        <b>${esc(i.name)}</b><small>${esc(expiryText(i))}</small>
+        <button class="x" type="button" data-used="${i.item_id}" title="Used up" aria-label="Mark ${esc(i.name)} as used up">✓</button></div>`).join("");
+  const soonRows = soon.map((i) => `
+      <div class="soon-row"><span class="badge ${i.freshness}">${esc(expiryText(i))}</span>
+        <div><span class="nm">${esc(i.name)}</span> <span class="qty">${esc(fmtQty(i))}</span></div>
+        <button class="used" type="button" data-used="${i.item_id}" aria-label="Mark ${esc(i.name)} as used">Used it</button></div>`).join("");
+  const cats = Object.entries(groups).map(([cat, items]) => `
+      <div class="cat"><h3>${esc(cat)}</h3><div class="chips">${items.map((i) => `
+        <span class="chip">${esc(i.name)}${fmtQty(i) ? ` <span class="d">${esc(fmtQty(i))}</span>` : ""}
+          <span class="d">· ${esc(expiryText(i))}</span>
+          <button class="x" type="button" data-used="${i.item_id}" title="Mark used" aria-label="Mark ${esc(i.name)} as used">✓</button></span>`).join("")}
+      </div></div>`).join("");
+  if (!c.items.length) return `<section class="card"><div class="card-head">${icon("i-basket", 18)}<h2>${esc(c.title)}</h2></div>
+      <p class="sub">Nothing here yet. Tell me what you bought, like "a dozen eggs, milk and spinach".</p></section>`;
+  return `<section class="card k-pantry" aria-label="${esc(c.title)}">
+      <div class="card-head">${icon("i-basket", 18)}<h2>${esc(c.title)}</h2></div>
+      <p class="sub">${c.items.length} item${c.items.length === 1 ? "" : "s"}${soon.length ? ` · ${soon.length} to use soon` : ""}${spices.length ? ` · ${spices.length} spices` : ""}</p>
+      ${soon.length ? `<div class="section-label">Use soon</div>${soonRows}` : ""}
+      ${spices.length ? `<div class="section-label">Spice rack · masale</div><div class="rack">${rack}</div>` : ""}
+      ${cats ? `${soon.length || spices.length ? '<div class="section-label">Everything else</div>' : ""}<div class="cats">${cats}</div>` : ""}
+    </section>`;
+}
+
+function addedCard(c) {
+  return `<section class="card" aria-label="Added"><div class="card-head">${icon("i-plus", 17)}<h2>Added to your pantry</h2></div>
+    <div class="chips" style="margin-top:0.6rem">${c.items.map((i) => `<span class="chip plain">${esc(i.name)}${fmtQty(i) ? ` <span class="d">${esc(fmtQty(i))}</span>` : ""}<span class="d">· ${esc(expiryText(i))}</span></span>`).join("")}</div></section>`;
+}
+const usedCard = (c) => `<section class="card"><div class="card-head">${icon("i-basket", 17)}<h2>${c.used_all ? `Used up: ${esc(c.name)}` : `${esc(c.name)}: ${esc(c.remaining)}${c.unit ? " " + esc(c.unit) : ""} left`}</h2></div></section>`;
+
+// ---------------------------------------------------------------- recipes
+const recipes = {};
+// The Indian food mark: green = vegetarian, yellow = egg, red = chicken. Then allergy labels.
+function foodMark(r) {
+  const [cls, label] = r.diets.includes("vegetarian") ? ["veg", "Veg"] : r.diets.includes("eggetarian") ? ["egg", "Egg"]
+    : r.diets.includes("non_veg") ? ["nonveg", "Non-veg"] : ["other", "Other meat"];
+  return `<span class="mark ${cls}" title="${esc(label)}"><i></i>${label}</span>`;
+}
+const SHORT = { gluten_free: "Gluten-free", dairy_free: "Dairy-free", nut_free: "Nut-free" };
+function dietChips(r) {
+  if (!r.labeled) return `<span class="chip miss">No diet labels yet</span>`;
+  return foodMark(r) + r.diets.filter((d) => SHORT[d]).map((d) => `<span class="chip diet">${SHORT[d]}</span>`).join("");
+}
+const plain = (x) => x.replace(/\s*\(.*?\)/g, "");
+const listText = (xs) => xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`;
+function shopping(r) { return [...r.match.missing, ...r.match.expired]; }
+
+function recipeTile(r) {
+  recipes[r.recipe_id] = r;
+  const m = r.match, pct = Math.round(m.ratio * 100);
+  const need = shopping(r);
+  const fit = DIET.diets.length || DIET.avoid.length
+    ? (r.conflicts && r.conflicts.length ? `<span class="fit no">Not for your diet: ${esc(r.conflicts.join(", "))}</span>` : `<span class="fit ok">✓ Fits your diet</span>`) : "";
+  return `<article class="rtile">
+      <div class="rtop"><div class="dish" aria-hidden="true">${dishIcon(r.title)}</div><h3>${esc(r.title)}</h3></div>
+      ${fit}
+      <div class="meta"><span>${icon("i-clock", 14)} ${r.minutes} min</span>${r.cuisine ? `<span>${esc(r.cuisine)}</span>` : ""}<span>${icon("i-users", 14)} serves ${r.servings}</span></div>
+      <div class="meter"><div class="t"><i style="width:${pct}%"></i></div><span>You have ${m.have_count} of ${m.total}</span></div>
+      ${m.uses_expiring.length ? `<div class="expiring">Uses up your ${esc(listText(m.uses_expiring))}</div>` : ""}
+      <div class="chips">${m.have.map((x) => `<span class="chip have" title="${esc(x)}">${esc(plain(x))}</span>`).join("")}${m.expired.map((x) => `<span class="chip exp">${esc(plain(x))} (expired)</span>`).join("")}${m.missing.map((x) => `<span class="chip miss" title="You need this">+ ${esc(plain(x))}</span>`).join("")}</div>
+      <div class="chips">${dietChips(r)}</div>
+      <div class="actions">
+        <button class="btn primary" type="button" data-view="${r.recipe_id}">View recipe</button>
+        ${need.length ? `<button class="btn" type="button" data-shop="${r.recipe_id}">Copy shopping list (${need.length})</button>` : ""}
+      </div>
+    </article>`;
+}
+
+function recipesCard(c) {
+  const bits = [c.query && `“${c.query}”`, ...c.diets.map((d) => DIET_NAMES[d]), c.max_minutes && `under ${c.max_minutes} min`,
+    c.use_expiring && "using food that expires soon", (c.avoid || []).length && `without ${c.avoid.join(", ")}`,
+    c.ignored_saved_diet && "outside your saved diet"].filter(Boolean);
+  return `<section class="card k-recipes" aria-label="Recipe ideas">
+      <div class="card-head">${icon("i-pot", 18)}<h2>Recipe ideas</h2></div>
+      <p class="sub">${bits.length ? esc(bits.join(" · ")) : "Ranked by what's in your pantry"}</p>
+      ${c.recipes.length ? `<div class="rgrid">${c.recipes.map(recipeTile).join("")}</div>` : `<p class="sub">No recipes match those filters. Try fewer filters.</p>`}
+    </section>`;
+}
+
+function recipeCard(c) {
+  const r = c.recipe; recipes[r.recipe_id] = r;
+  const m = r.match;
+  const status = (ing) => m.have.includes(ing) ? ["have", "✓"] : m.expired.includes(ing) ? ["exp", "!"] : m.missing.includes(ing) ? ["miss", ""] : ["staple", "·"];
+  const steps = r.steps.split(/(?<=[.!?])\s+(?=[A-Z])/).filter(Boolean);
+  const need = shopping(r);
+  const by = { starter: "hand check", gemini: "Gemini (ai.if)", jev: "Jev (ai.if)" }[r.tagged_by];
+  return `<section class="card k-recipe" aria-label="${esc(r.title)}">
+      <div class="rtop"><div class="dish" aria-hidden="true">${dishIcon(r.title)}</div><h2 style="margin:0;font-size:1.05rem;font-weight:600">${c.added ? "Saved: " : ""}${esc(r.title)}</h2></div>
+      ${r.conflicts && r.conflicts.length ? `<p class="fit no" style="margin:0.5rem 0 0">Not for your diet: ${esc(r.conflicts.join(", "))}</p>` : ""}
+      <div class="meta" style="margin-top:0.35rem"><span>${icon("i-clock", 14)} ${r.minutes} min</span>${r.cuisine ? `<span>${esc(r.cuisine)}</span>` : ""}<span>${icon("i-users", 14)} serves ${r.servings}</span></div>
+      <div class="chips" style="margin-top:0.5rem">${dietChips(r)}</div>
+      <div class="recipe-body">
+        <div><div class="section-label" style="margin-top:0">Ingredients · you have ${m.have_count} of ${m.total}</div>
+          <ul class="ing">${r.ingredients.map((ing) => { const [cls, mk] = status(ing); return `<li class="${cls}"><span class="mk">${mk}</span>${esc(ing)}${cls === "exp" ? " (yours expired)" : cls === "staple" ? " (staple)" : ""}</li>`; }).join("")}</ul>
+          ${need.length ? `<div class="actions" style="margin-top:0.7rem"><button class="btn" type="button" data-shop="${r.recipe_id}">Copy shopping list (${need.length})</button></div>` : ""}
+        </div>
+        <div><div class="section-label" style="margin-top:0">Steps</div><ol class="steps">${steps.map((s) => `<li>${esc(s)}</li>`).join("")}</ol></div>
+      </div>
+      ${by ? `<p class="foot">Diet labels: ${esc(by)}. Always check package labels for allergies.</p>` : ""}
+    </section>`;
+}
+
+// ---------------------------------------------------------------- recalls
+function recallsCard(c) {
+  const rows = c.matches.map((m) => `
+      <div class="recall ${m.level === "brand" ? "" : "check"}">
+        <div class="top"><span class="item">${esc(m.item)}</span>
+          <span class="badge ${m.level === "brand" ? "expired" : "soon"}">${m.level === "brand" ? "Brand matches" : "Check the brand"}</span>
+          <span class="badge expired" title="${esc(m.meaning)}">${esc(m.classification || "Unclassified")}</span>
+          <span class="chip plain">${esc(m.report_date || "")}</span></div>
+        <p class="product">${esc((m.product_description || "").slice(0, 220))}</p>
+        <p class="why"><strong>Why:</strong> ${esc((m.reason_for_recall || "").slice(0, 200))}</p>
+        ${m.code_info ? `<p class="why"><strong>Lot info:</strong> ${esc(m.code_info.slice(0, 200))}</p>` : ""}
+      </div>`).join("");
+  return `<section class="card k-recalls" aria-label="Recall check">
+      <div class="card-head">${icon("i-shield", 18)}<h2>Recall check</h2></div>
+      <p class="sub">Checked ${c.checked_items} pantry item${c.checked_items === 1 ? "" : "s"} against ${Number(c.recalls_checked).toLocaleString()} FDA food recalls from the past year, read live from BigQuery.</p>
+      ${c.matches.length ? rows + `<p class="note">Compare the brand, package size and lot codes on your product with the notice. If it matches, don't eat it; follow the recall instructions.</p>`
+        : `<div class="clear-ok">${icon("i-shield", 20)} No matching recalls found for your pantry.</div><p class="note">This checks FDA data, updated weekly. It can't guarantee a product is safe.</p>`}
+    </section>`;
+}
+
+function dietCard(c) {
+  const chips = [...c.names.map((n) => `<span class="chip diet">${esc(n)}</span>`), ...c.avoid.map((a) => `<span class="chip exp">no ${esc(a)}</span>`)].join("");
+  return `<section class="card k-diet diet-card" aria-label="Your diet"><div class="card-head">${icon("i-leaf", 18)}<h2>${c.saved ? "Diet saved" : "Your diet"}</h2></div>
+    ${chips ? `<div class="chips">${chips}</div><p class="note">Recipe ideas now follow this. Change it any time from the diet button at the top.</p>`
+      : `<p class="sub">No diet saved. You'll see every recipe.</p>`}</section>`;
+}
+
+function heroCard(d) {
+  const items = d.card.items, soon = items.filter((i) => i.freshness === "soon" || i.freshness === "expired").length;
+  const spices = items.filter((i) => i.category === "Spices & masalas").length;
+  const h = new Date().getHours(), greet = h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening";
+  return `<section class="card hero" aria-label="Welcome">
+    <h2>${greet}! What's cooking?</h2>
+    <p class="lead">${soon ? `You have <strong>${soon} item${soon === 1 ? "" : "s"}</strong> to use soon.` : "Your pantry is in good shape."} Ask me anything, in English or Hinglish.</p>
+    <div class="stats">
+      <div class="stat"><b>${items.length}</b><span>in your pantry</span></div>
+      <div class="stat warn"><b>${soon}</b><span>use soon</span></div>
+      <div class="stat spice"><b>${spices}</b><span>spices &amp; masalas</span></div>
+      <div class="stat plum"><b>${d.status.recipes}</b><span>recipes</span></div>
+    </div>
+    <div class="ideas">${IDEAS.map(([em, t, sub, q]) => `<button class="idea" type="button" data-q="${esc(q)}"><span class="em" aria-hidden="true">${em}</span><span><b>${esc(t)}</b><small>${esc(sub)}</small></span></button>`).join("")}</div>
+  </section>`;
+}
+
+const RENDER = { diet: dietCard, pantry: pantryCard, added: addedCard, used: usedCard, recipes: recipesCard, recipe: recipeCard, recalls: recallsCard };
+const TOOL_LABEL = {
+  list_pantry: (a) => a.expiring_within_days != null ? `Checked what expires within ${a.expiring_within_days} days` : a.category ? `Listed ${a.category}` : "Checked your pantry",
+  add_pantry_items: (a) => `Added ${(a.items || []).length} item${(a.items || []).length === 1 ? "" : "s"}`,
+  use_pantry_item: (a) => `Marked ${a.name ?? ""} used`,
+  suggest_recipes: (a) => `Searched recipes${a.query ? `: “${a.query}”` : ""}`,
+  get_recipe: (a) => `Opened ${a.title ?? "recipe"}`,
+  check_recalls: () => "Checked FDA recalls in BigQuery",
+  add_recipe: (a) => `Saved recipe: ${a.title ?? ""}`,
+  set_diet: () => "Saved your diet",
+};
+
+// ---------------------------------------------------------------- messages
+function scrollDown() { $("thread").scrollTop = $("thread").scrollHeight; }
+function addUser(text) {
+  const el = document.createElement("div"); el.className = "msg user";
+  el.innerHTML = `<div class="stack"><div class="bubble">${esc(text)}</div></div>`;
+  $("messages").appendChild(el); scrollDown();
+}
+function botShell() {
+  const el = document.createElement("div"); el.className = "msg bot";
+  el.innerHTML = `<div class="avatar" aria-hidden="true"><svg width="18" height="18"><use href="#i-logo"/></svg></div>
+    <div class="stack"><div class="bubble typing" aria-label="PantryPal is thinking"><i></i><i></i><i></i></div></div>`;
+  $("messages").appendChild(el); scrollDown();
+  return el.querySelector(".stack");
+}
+function fill(stack, data, isError = false) {
+  const tools = (data.tool_calls || []).map((t) => `<span class="tool${t.ok ? "" : " fail"}">${icon("i-db", 12)}${esc((TOOL_LABEL[t.name] || (() => t.name))(t.args || {}))}</span>`).join("");
+  stack.innerHTML = (tools ? `<div class="tools">${tools}</div>` : "") +
+    (data.reply ? `<div class="bubble${isError ? " err" : ""}">${md(data.reply)}</div>` : "") +
+    (data.cards || []).map((c) => (RENDER[c.type] || (() => ""))(c)).join("");
+  (data.cards || []).filter((c) => c.type === "diet").forEach(showDiet);
+  scrollDown();
+}
+const addBot = (data, isError) => fill(botShell(), data, isError);
+
+async function send(text) {
+  text = text.trim();
+  if (!text || $("send").disabled) return;
+  $("send").disabled = true; $("input").value = ""; resize();
+  addUser(text); history.push({ role: "user", text });
+  const stack = botShell();
+  try {
+    const res = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: history, tz: TZ }) });
+    const data = await res.json();
+    if (!res.ok) throw new Error(typeof data.detail === "string" ? data.detail : "Something went wrong. Please try again.");
+    history.push({ role: "assistant", text: data.reply });
+    fill(stack, data);
+    refreshStatus();
+  } catch (e) { history.pop(); fill(stack, { reply: e.message }, true); }
+  finally { $("send").disabled = false; $("input").focus(); }
+}
+
+// ---------------------------------------------------------------- status & start
+function showStatus(s) {
+  const pill = $("data");
+  if (s.demo_items > 0) {
+    pill.classList.add("demo");
+    $("dataText").innerHTML = `Demo<span class="plong"> pantry</span> <button type="button" id="clearDemo">Clear</button>`;
+    $("clearDemo").addEventListener("click", clearDemo);
+  } else {
+    pill.classList.remove("demo");
+    $("dataText").innerHTML = `${s.items} item${s.items === 1 ? "" : "s"}<span class="plong"> · ${s.recipes} recipes</span>`;
+  }
+}
+function showDiet(d) {
+  DIET = { diets: d.diets || [], avoid: d.avoid || [], names: d.names || [] };
+  const label = DIET.names.length ? DIET.names.join(" · ") : DIET.avoid.length ? `No ${DIET.avoid[0]}` : "Set diet";
+  $("dietText").textContent = label;
+  $("dietBtn").classList.toggle("none", !DIET.names.length && !DIET.avoid.length);
+  $("dietBtn").setAttribute("aria-label", `Diet: ${label}. Change`);
+}
+function openDiet() {
+  const opt = ([k, name, hint]) => `<button type="button" class="opt" data-diet="${k}" aria-pressed="${DIET.diets.includes(k)}">${esc(name)}${hint ? `<span class="h">${esc(hint)}</span>` : ""}</button>`;
+  $("dietMain").innerHTML = DIET_MAIN.map(opt).join("");
+  $("dietAlso").innerHTML = DIET_ALSO.map(opt).join("");
+  $("avoidIn").value = DIET.avoid.join(", ");
+  $("dietDlg").showModal();
+}
+$("dietDlg").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-diet]"); if (!b) return;
+  const on = b.getAttribute("aria-pressed") !== "true";
+  if (on && $("dietMain").contains(b)) $("dietMain").querySelectorAll(".opt").forEach((o) => o.setAttribute("aria-pressed", "false"));
+  b.setAttribute("aria-pressed", String(on));
+});
+$("dietForm").addEventListener("submit", async (e) => {
+  if (e.submitter?.value !== "save") return;
+  e.preventDefault();
+  const diets = [...$("dietDlg").querySelectorAll('.opt[aria-pressed="true"]')].map((o) => o.dataset.diet);
+  const avoid = $("avoidIn").value.split(",").map((x) => x.trim()).filter(Boolean);
+  try {
+    const res = await fetch("/api/diet", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ diets, avoid }) });
+    const d = await res.json(); if (!res.ok) throw new Error(d.detail);
+    showDiet(d); $("dietDlg").close(); toast("Diet saved");
+    addBot({ reply: d.names.length || d.avoid.length ? "Got it. Recipe ideas will follow your diet from now on." : "Diet cleared. You'll see every recipe.", cards: [{ ...d, type: "diet", saved: true }] });
+  } catch (err) { toast(err.message || "Couldn't save"); }
+});
+$("dietBtn").addEventListener("click", openDiet);
+
+async function refreshStatus() {
+  try { const d = await (await fetch(`/api/pantry?tz=${encodeURIComponent(TZ || "")}`)).json(); showStatus(d.status); } catch {}
+}
+async function clearDemo() {
+  if (!confirm("Remove all demo pantry items? Items you added are kept.")) return;
+  try {
+    const d = await (await fetch(`/api/demo/clear?tz=${encodeURIComponent(TZ || "")}`, { method: "POST" })).json();
+    showStatus(d.status);
+    addBot({ reply: `Demo items removed. Here's your pantry now:`, cards: [d.card] });
+  } catch { addBot({ reply: "Couldn't clear the demo items. Please try again." }, true); }
+}
+async function markUsed(id, btn) {
+  btn.disabled = true;
+  try {
+    const res = await fetch("/api/pantry/used", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ item_id: Number(id), tz: TZ }) });
+    const d = await res.json();
+    if (!res.ok) throw new Error(d.detail);
+    const card = btn.closest(".card");
+    card.outerHTML = pantryCard(d.card);
+    showStatus(d.status); toast("Marked as used");
+  } catch (e) { btn.disabled = false; toast(e.message || "Couldn't update"); }
+}
+async function start() {
+  try {
+    const res = await fetch(`/api/pantry?tz=${encodeURIComponent(TZ || "")}`);
+    const d = await res.json();
+    if (!res.ok) throw new Error();
+    showStatus(d.status);
+    if (d.diet) showDiet(d.diet);
+    const stack = botShell();
+    stack.innerHTML = heroCard(d) + pantryCard(d.card);
+  } catch { $("dataText").textContent = "Offline"; addBot({ reply: "I can't reach your pantry right now. Please try again in a moment." }, true); }
+}
+
+// ---------------------------------------------------------------- wiring
+if (matchMedia("(max-width: 720px)").matches) $("input").placeholder = "Ask, or add groceries…";
+function resize() { const t = $("input"); t.style.height = "auto"; t.style.height = Math.min(t.scrollHeight, 150) + "px"; }
+$("quick").innerHTML = QUICK.map(([ic, label, q]) => `<button type="button" data-q="${esc(q)}">${icon(ic, 15)} ${esc(label)}</button>`).join("");
+$("quick").addEventListener("click", (e) => { const b = e.target.closest("[data-q]"); if (b) send(b.dataset.q); });
+$("messages").addEventListener("click", (e) => {
+  const q = e.target.closest(".idea[data-q]"); if (q) { send(q.dataset.q); return; }
+  const u = e.target.closest("[data-used]"); if (u) { markUsed(u.dataset.used, u); return; }
+  const v = e.target.closest("[data-view]"); if (v) { send(`Show me the recipe for ${recipes[v.dataset.view].title}`); return; }
+  const s = e.target.closest("[data-shop]");
+  if (s) { const r = recipes[s.dataset.shop]; copy(`Shopping list for ${r.title}:\n` + shopping(r).map((x) => `- ${x}`).join("\n"), "Shopping list"); }
+});
+$("form").addEventListener("submit", (e) => { e.preventDefault(); send($("input").value); });
+$("input").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send($("input").value); } });
+$("input").addEventListener("input", resize);
+start();
+</script>
+</body>
+</html>

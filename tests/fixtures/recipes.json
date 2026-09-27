@@ -1,0 +1,2620 @@
+[
+ {
+  "title": "Garlicky Spinach Scrambled Eggs",
+  "cuisine": "American",
+  "minutes": 10,
+  "servings": 2,
+  "ingredients": [
+   "eggs",
+   "baby spinach",
+   "garlic",
+   "butter",
+   "salt",
+   "black pepper"
+  ],
+  "steps": "Melt the butter in a pan over medium heat and soften the sliced garlic for a minute. Add the spinach and stir until just wilted. Pour in the beaten eggs, season, and stir gently until softly set.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Chickpea and Spinach Curry",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 4,
+  "ingredients": [
+   "canned chickpeas",
+   "baby spinach",
+   "onion",
+   "garlic",
+   "canned tomatoes",
+   "coconut milk",
+   "curry powder",
+   "basmati rice"
+  ],
+  "steps": "Start the rice. Fry the diced onion until golden, add garlic and curry powder for a minute, then the tomatoes and coconut milk. Add the drained chickpeas and simmer 15 minutes. Stir in the spinach until wilted and serve over rice.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Lemon Herb Chicken Thighs",
+  "cuisine": "Mediterranean",
+  "minutes": 35,
+  "servings": 4,
+  "ingredients": [
+   "chicken thighs",
+   "lemon",
+   "garlic",
+   "olive oil",
+   "oregano",
+   "salt",
+   "black pepper"
+  ],
+  "steps": "Toss the chicken with olive oil, lemon zest and juice, crushed garlic, oregano, salt and pepper. Roast skin side up at 425°F (220°C) for about 30 minutes, until golden and cooked through. Rest 5 minutes before serving.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": false,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Blistered Cherry Tomato Pasta",
+  "cuisine": "Italian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "pasta",
+   "cherry tomatoes",
+   "garlic",
+   "olive oil",
+   "basil",
+   "parmesan"
+  ],
+  "steps": "Boil the pasta. Meanwhile, cook the tomatoes in olive oil over high heat until they burst, then add sliced garlic. Toss with the drained pasta, a splash of pasta water, torn basil and grated parmesan.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Chicken Fajita Wraps",
+  "cuisine": "Mexican",
+  "minutes": 25,
+  "servings": 4,
+  "ingredients": [
+   "chicken thighs",
+   "bell peppers",
+   "onion",
+   "tortillas",
+   "cumin",
+   "paprika",
+   "lemon",
+   "cilantro"
+  ],
+  "steps": "Slice the chicken, peppers and onion into strips. Season with cumin and paprika and cook in a hot pan until charred and cooked through. Squeeze over lemon, then serve in warm tortillas with cilantro.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": false,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Veggie Fried Rice",
+  "cuisine": "Chinese",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "basmati rice",
+   "eggs",
+   "frozen peas",
+   "carrots",
+   "green onion",
+   "soy sauce"
+  ],
+  "steps": "Use rice cooked earlier, ideally cold. Scramble the eggs in a hot oiled pan and set aside. Stir-fry diced carrot and peas, add the rice and fry until hot, then return the eggs with soy sauce and sliced green onion.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Banana Peanut Butter Overnight Oats",
+  "cuisine": "Breakfast",
+  "minutes": 5,
+  "servings": 1,
+  "ingredients": [
+   "oats",
+   "milk",
+   "bananas",
+   "peanut butter",
+   "honey"
+  ],
+  "steps": "Stir the oats, milk, half a mashed banana and a spoon of peanut butter together in a jar. Refrigerate overnight. Top with the rest of the banana and a drizzle of honey.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": false
+  }
+ },
+ {
+  "title": "Greek Yogurt Breakfast Bowl",
+  "cuisine": "Breakfast",
+  "minutes": 5,
+  "servings": 1,
+  "ingredients": [
+   "greek yogurt",
+   "oats",
+   "berries",
+   "honey"
+  ],
+  "steps": "Spoon the yogurt into a bowl, then top with oats, fresh berries and a drizzle of honey.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Cheesy Black Bean Quesadillas",
+  "cuisine": "Mexican",
+  "minutes": 15,
+  "servings": 2,
+  "ingredients": [
+   "tortillas",
+   "canned black beans",
+   "cheddar cheese",
+   "bell peppers",
+   "salsa"
+  ],
+  "steps": "Mash half the beans lightly. Fill each tortilla with beans, diced pepper and cheddar, then fold. Cook in a dry pan until crisp on both sides and the cheese melts. Serve with salsa.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Creamy Tomato Soup",
+  "cuisine": "American",
+  "minutes": 30,
+  "servings": 4,
+  "ingredients": [
+   "canned tomatoes",
+   "onion",
+   "garlic",
+   "vegetable broth",
+   "heavy cream",
+   "butter"
+  ],
+  "steps": "Soften the onion and garlic in butter. Add the tomatoes and broth and simmer 20 minutes. Blend until smooth, then stir in the cream and season to taste.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Pea and Mint Risotto",
+  "cuisine": "Italian",
+  "minutes": 35,
+  "servings": 3,
+  "ingredients": [
+   "arborio rice",
+   "frozen peas",
+   "onion",
+   "vegetable broth",
+   "parmesan",
+   "butter",
+   "mint"
+  ],
+  "steps": "Soften the onion in butter, add the rice and stir for a minute. Add hot broth a ladle at a time, stirring, for about 20 minutes. Stir in the peas, parmesan and chopped mint in the last few minutes.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Two-Ingredient Banana Pancakes",
+  "cuisine": "Breakfast",
+  "minutes": 15,
+  "servings": 1,
+  "ingredients": [
+   "bananas",
+   "eggs",
+   "cinnamon"
+  ],
+  "steps": "Mash a ripe banana and whisk with two eggs and a pinch of cinnamon. Cook small pancakes in a lightly oiled pan over medium-low heat, flipping once.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Red Lentil Soup",
+  "cuisine": "Middle Eastern",
+  "minutes": 35,
+  "servings": 4,
+  "ingredients": [
+   "red lentils",
+   "onion",
+   "carrots",
+   "garlic",
+   "cumin",
+   "vegetable broth",
+   "lemon"
+  ],
+  "steps": "Soften the onion, carrot and garlic. Add cumin, the rinsed lentils and broth, and simmer 25 minutes until the lentils fall apart. Blend partly, then finish with lemon juice.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Black Bean Stuffed Peppers",
+  "cuisine": "Tex-Mex",
+  "minutes": 40,
+  "servings": 4,
+  "ingredients": [
+   "bell peppers",
+   "basmati rice",
+   "canned black beans",
+   "corn",
+   "cheddar cheese",
+   "salsa"
+  ],
+  "steps": "Halve and seed the peppers. Mix cooked rice, beans, corn and salsa, then fill the peppers. Top with cheddar and bake at 400°F (200°C) for about 25 minutes.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Sesame Peanut Noodles",
+  "cuisine": "Thai-inspired",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "noodles",
+   "peanut butter",
+   "soy sauce",
+   "garlic",
+   "lemon",
+   "cucumber",
+   "green onion"
+  ],
+  "steps": "Cook the noodles. Whisk peanut butter, soy sauce, grated garlic, lemon juice and a splash of hot water into a sauce. Toss with the noodles, then top with sliced cucumber and green onion.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": true,
+   "nut_free": false
+  }
+ },
+ {
+  "title": "Shakshuka",
+  "cuisine": "North African",
+  "minutes": 25,
+  "servings": 2,
+  "ingredients": [
+   "eggs",
+   "canned tomatoes",
+   "onion",
+   "bell peppers",
+   "garlic",
+   "paprika",
+   "cumin"
+  ],
+  "steps": "Cook the onion and pepper until soft, add garlic and spices, then the tomatoes, and simmer 10 minutes. Make wells, crack in the eggs, cover and cook until the whites set.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Chicken and Rice Soup",
+  "cuisine": "American",
+  "minutes": 45,
+  "servings": 4,
+  "ingredients": [
+   "chicken thighs",
+   "basmati rice",
+   "carrots",
+   "celery",
+   "onion",
+   "chicken broth"
+  ],
+  "steps": "Simmer the chicken in the broth for 20 minutes, then remove and shred. Add diced onion, carrot, celery and the rice and cook 15 minutes. Return the chicken and season.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": false,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Caprese Salad",
+  "cuisine": "Italian",
+  "minutes": 10,
+  "servings": 2,
+  "ingredients": [
+   "tomatoes",
+   "mozzarella",
+   "basil",
+   "olive oil",
+   "balsamic vinegar"
+  ],
+  "steps": "Slice the tomatoes and mozzarella and arrange them overlapping with basil leaves. Drizzle with olive oil and balsamic, then season with salt and pepper.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Migas",
+  "cuisine": "Tex-Mex",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "eggs",
+   "tortillas",
+   "onion",
+   "bell peppers",
+   "cheddar cheese",
+   "salsa"
+  ],
+  "steps": "Cut the tortillas into strips and fry until crisp. Add diced onion and pepper and cook until soft. Pour in the beaten eggs and scramble, then finish with cheddar and salsa.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Pesto Pasta with Peas",
+  "cuisine": "Italian",
+  "minutes": 15,
+  "servings": 2,
+  "ingredients": [
+   "pasta",
+   "basil pesto",
+   "frozen peas",
+   "parmesan"
+  ],
+  "steps": "Cook the pasta, adding the peas for the last 2 minutes. Drain, keeping a little water, then toss with pesto, a splash of the water and grated parmesan.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": false
+  }
+ },
+ {
+  "title": "Crispy Chickpea Salad",
+  "cuisine": "Mediterranean",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "canned chickpeas",
+   "cherry tomatoes",
+   "cucumber",
+   "red onion",
+   "lemon",
+   "olive oil",
+   "feta"
+  ],
+  "steps": "Pat the chickpeas dry and fry in olive oil until crisp. Toss with halved tomatoes, cucumber, thinly sliced red onion, lemon juice and crumbled feta.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Dal Tadka",
+  "cuisine": "Indian",
+  "minutes": 35,
+  "servings": 4,
+  "ingredients": [
+   "toor dal (arhar)",
+   "onion",
+   "tomatoes",
+   "garlic",
+   "ghee",
+   "cumin seeds (jeera)",
+   "turmeric (haldi)",
+   "red chili powder (lal mirch)",
+   "asafoetida (hing)",
+   "cilantro (hara dhania)"
+  ],
+  "steps": "Rinse the dal and pressure-cook it with turmeric, salt and 3 cups of water for 3 to 4 whistles, or simmer for 30 minutes, until soft. Whisk it smooth. For the tadka, heat the ghee, crackle the cumin seeds and add a pinch of hing. Add sliced garlic and chopped onion and fry until golden, then the tomatoes and chili powder until soft. Pour the tadka over the dal, simmer 5 minutes and finish with cilantro.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Tomato Moong Dal",
+  "cuisine": "Indian",
+  "minutes": 25,
+  "servings": 3,
+  "ingredients": [
+   "moong dal",
+   "tomatoes",
+   "ghee",
+   "cumin seeds (jeera)",
+   "turmeric (haldi)",
+   "asafoetida (hing)",
+   "green chilies (hari mirch)",
+   "cilantro (hara dhania)",
+   "lemon"
+  ],
+  "steps": "Rinse the moong dal and simmer it with turmeric, salt and 3 cups of water for about 20 minutes, until soft. Heat the ghee, crackle the cumin seeds and add the hing, slit green chilies and chopped tomatoes. Cook until the tomatoes break down. Stir this into the dal and simmer 3 minutes. Finish with lemon juice and cilantro.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Jeera Rice",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 3,
+  "ingredients": [
+   "basmati rice",
+   "ghee",
+   "cumin seeds (jeera)",
+   "bay leaf (tej patta)",
+   "salt"
+  ],
+  "steps": "Rinse the rice until the water runs clear and soak it for 15 minutes. Heat the ghee, crackle the cumin seeds with the bay leaf, then add the drained rice and stir gently for a minute. Add 1¾ cups of water per cup of rice and some salt. Cover and cook on low for 12 minutes. Rest 5 minutes and fluff with a fork.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Chana Masala",
+  "cuisine": "Indian",
+  "minutes": 35,
+  "servings": 4,
+  "ingredients": [
+   "canned chickpeas (chole)",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "green chilies (hari mirch)",
+   "cumin seeds (jeera)",
+   "coriander powder (dhania)",
+   "turmeric (haldi)",
+   "garam masala",
+   "cilantro (hara dhania)"
+  ],
+  "steps": "Crackle the cumin seeds in hot oil, then fry the chopped onion until deep golden. Add grated ginger, garlic and green chilies for a minute. Add the tomatoes, turmeric, coriander powder and salt and cook until the oil separates. Add the drained chickpeas and a cup of water, mash a few against the pan and simmer 15 minutes. Stir in the garam masala and top with cilantro.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Palak Paneer",
+  "cuisine": "Indian",
+  "minutes": 35,
+  "servings": 3,
+  "ingredients": [
+   "spinach (palak)",
+   "paneer",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "green chilies (hari mirch)",
+   "cumin seeds (jeera)",
+   "garam masala",
+   "fresh cream"
+  ],
+  "steps": "Blanch the spinach for 2 minutes, cool it in cold water and blend it with the green chilies until smooth. Crackle the cumin seeds in oil, then fry the onion until golden. Add ginger, garlic and tomatoes and cook until soft. Stir in the spinach puree, garam masala and salt and simmer 5 minutes. Add cubed paneer and a spoon of cream and heat through.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Aloo Gobi",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 4,
+  "ingredients": [
+   "potatoes (aloo)",
+   "cauliflower (gobi)",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "green chilies (hari mirch)",
+   "cumin seeds (jeera)",
+   "turmeric (haldi)",
+   "coriander powder (dhania)",
+   "garam masala",
+   "cilantro (hara dhania)"
+  ],
+  "steps": "Crackle the cumin seeds in oil and fry the onion until soft. Add ginger, green chilies, turmeric and coriander powder, then the cubed potatoes and cauliflower florets with salt. Toss to coat, cover and cook on low for 15 minutes, stirring now and then. Add the chopped tomatoes and cook uncovered until the vegetables are tender. Finish with garam masala and cilantro.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Kanda Poha",
+  "cuisine": "Indian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "poha",
+   "onion",
+   "potato (aloo)",
+   "peanuts",
+   "mustard seeds (rai)",
+   "curry leaves (kadi patta)",
+   "green chilies (hari mirch)",
+   "turmeric (haldi)",
+   "lemon",
+   "cilantro (hara dhania)",
+   "sugar"
+  ],
+  "steps": "Rinse the poha in a strainer and let it soften for 5 minutes. Fry the peanuts in oil until crisp and set them aside. In the same oil, crackle the mustard seeds with curry leaves and green chilies. Add the onion and diced potato and cook covered until the potato is tender. Add turmeric, the poha, salt and a pinch of sugar, toss gently and steam 2 minutes. Finish with the peanuts, lemon juice and cilantro.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": false
+  }
+ },
+ {
+  "title": "Rava Upma",
+  "cuisine": "Indian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "semolina (rava)",
+   "onion",
+   "mustard seeds (rai)",
+   "urad dal",
+   "curry leaves (kadi patta)",
+   "ginger (adrak)",
+   "green chilies (hari mirch)",
+   "ghee",
+   "cilantro (hara dhania)"
+  ],
+  "steps": "Dry-roast the semolina until it smells nutty, then set it aside. Heat the ghee and crackle the mustard seeds and urad dal until golden. Add curry leaves, ginger, green chilies and onion and cook until soft. Pour in 2½ cups of water with salt and bring to a boil. Stream in the semolina while stirring, cover and cook on low for 3 minutes. Finish with cilantro.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Rajma Chawal",
+  "cuisine": "Indian",
+  "minutes": 45,
+  "servings": 4,
+  "ingredients": [
+   "canned kidney beans (rajma)",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "cumin seeds (jeera)",
+   "coriander powder (dhania)",
+   "red chili powder (lal mirch)",
+   "garam masala",
+   "basmati rice"
+  ],
+  "steps": "Start the rice. Crackle the cumin seeds in oil and fry the onion until deep golden. Add ginger and garlic, then the tomatoes, coriander powder, chili powder and salt, and cook into a thick masala. Add the drained kidney beans and 2 cups of water and simmer 20 minutes, mashing a few beans to thicken the gravy. Stir in the garam masala and serve over the rice.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Masala Omelette",
+  "cuisine": "Indian",
+  "minutes": 10,
+  "servings": 1,
+  "ingredients": [
+   "eggs",
+   "onion",
+   "tomatoes",
+   "green chilies (hari mirch)",
+   "cilantro (hara dhania)",
+   "turmeric (haldi)"
+  ],
+  "steps": "Beat the eggs with a pinch of turmeric and salt. Stir in finely chopped onion, tomato, green chili and cilantro. Heat a little oil in a pan, pour in the eggs and cook on medium until the bottom is set. Fold or flip and cook 30 seconds more.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Anda Curry",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 3,
+  "ingredients": [
+   "eggs",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "turmeric (haldi)",
+   "red chili powder (lal mirch)",
+   "coriander powder (dhania)",
+   "garam masala",
+   "cilantro (hara dhania)"
+  ],
+  "steps": "Hard-boil the eggs for 10 minutes, peel them and make a few shallow slits. Fry the onion until golden, then add ginger and garlic. Add the tomatoes, turmeric, chili powder, coriander powder and salt and cook until thick. Add a cup of water and the eggs and simmer 8 minutes. Finish with garam masala and cilantro.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Homestyle Chicken Curry",
+  "cuisine": "Indian",
+  "minutes": 50,
+  "servings": 4,
+  "ingredients": [
+   "chicken thighs",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "yogurt (dahi)",
+   "turmeric (haldi)",
+   "red chili powder (lal mirch)",
+   "coriander powder (dhania)",
+   "garam masala",
+   "cilantro (hara dhania)"
+  ],
+  "steps": "Mix the chicken with yogurt, turmeric, chili powder and salt and set aside for 15 minutes. Fry the onion until deep golden, then add ginger and garlic. Add the tomatoes and coriander powder and cook until the oil separates. Add the chicken and cook on high for 5 minutes, then add a cup of water, cover and simmer 20 minutes until cooked through. Finish with garam masala and cilantro.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": false,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Moong Dal Khichdi",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 3,
+  "ingredients": [
+   "moong dal",
+   "basmati rice",
+   "ghee",
+   "cumin seeds (jeera)",
+   "turmeric (haldi)",
+   "asafoetida (hing)",
+   "black pepper"
+  ],
+  "steps": "Rinse the rice and moong dal together. Heat the ghee, crackle the cumin seeds and add the hing and a pinch of crushed black pepper. Add the rice and dal, turmeric, salt and 4 cups of water. Pressure-cook for 3 whistles, or simmer covered for 25 minutes, until soft and porridge-like. Serve with a spoon of ghee on top.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Bhindi Masala",
+  "cuisine": "Indian",
+  "minutes": 25,
+  "servings": 3,
+  "ingredients": [
+   "okra (bhindi)",
+   "onion",
+   "tomatoes",
+   "cumin seeds (jeera)",
+   "turmeric (haldi)",
+   "red chili powder (lal mirch)",
+   "coriander powder (dhania)",
+   "amchur"
+  ],
+  "steps": "Wash and fully dry the okra, then cut it into pieces. Fry it in oil on medium-high, uncovered, until it's no longer sticky, and set it aside. Crackle the cumin seeds, fry the onion, then add the tomatoes and spices with salt. Return the okra, toss for 3 minutes and finish with amchur.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Besan Chilla",
+  "cuisine": "Indian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "besan (gram flour)",
+   "tomatoes",
+   "green chilies (hari mirch)",
+   "cilantro (hara dhania)",
+   "carom seeds (ajwain)",
+   "turmeric (haldi)"
+  ],
+  "steps": "Whisk the besan with turmeric, ajwain, salt and enough water to make a pourable batter. Stir in finely chopped tomato, green chili and cilantro. Spread a ladle of batter thin on a hot oiled pan, cook until the edges lift, then flip and cook 1 minute more.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Lemon Rice",
+  "cuisine": "Indian",
+  "minutes": 20,
+  "servings": 3,
+  "ingredients": [
+   "cooked rice",
+   "lemon",
+   "peanuts",
+   "mustard seeds (rai)",
+   "chana dal",
+   "urad dal",
+   "curry leaves (kadi patta)",
+   "green chilies (hari mirch)",
+   "turmeric (haldi)",
+   "asafoetida (hing)"
+  ],
+  "steps": "Heat oil and fry the peanuts until crisp. Add the mustard seeds, chana dal and urad dal and fry until the dals turn golden. Add curry leaves, green chilies, hing and turmeric. Turn off the heat, add the cooked rice, lemon juice and salt, and mix gently.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": true,
+   "nut_free": false
+  }
+ },
+ {
+  "title": "Curd Rice",
+  "cuisine": "Indian",
+  "minutes": 15,
+  "servings": 2,
+  "ingredients": [
+   "cooked rice",
+   "yogurt (dahi)",
+   "milk",
+   "mustard seeds (rai)",
+   "curry leaves (kadi patta)",
+   "ginger (adrak)",
+   "green chilies (hari mirch)"
+  ],
+  "steps": "Mash the rice lightly while it's warm, then mix in the yogurt, a splash of milk and salt. Heat a little oil, crackle the mustard seeds and add curry leaves, grated ginger and green chilies. Pour this tempering over the rice and mix. Serve cool.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Paneer Bhurji",
+  "cuisine": "Indian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "paneer",
+   "onion",
+   "tomatoes",
+   "green chilies (hari mirch)",
+   "turmeric (haldi)",
+   "garam masala",
+   "butter",
+   "cilantro (hara dhania)"
+  ],
+  "steps": "Melt the butter and fry the onion and green chilies until soft. Add the tomatoes, turmeric and salt and cook until mushy. Crumble in the paneer, add the garam masala and stir for 3 minutes. Finish with cilantro.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Masala Chai",
+  "cuisine": "Indian",
+  "minutes": 10,
+  "servings": 2,
+  "ingredients": [
+   "black tea (chai patti)",
+   "milk",
+   "ginger (adrak)",
+   "cardamom (elaichi)",
+   "sugar"
+  ],
+  "steps": "Bring 1 cup of water to a boil with crushed ginger and cardamom. Add the tea and simmer 2 minutes. Add 1 cup of milk and sugar to taste, bring back to a boil and simmer 2 minutes more. Strain into cups.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Vegetable Pulao",
+  "cuisine": "Indian",
+  "minutes": 35,
+  "servings": 4,
+  "ingredients": [
+   "basmati rice",
+   "frozen peas (matar)",
+   "carrots",
+   "green beans",
+   "onion",
+   "ghee",
+   "cumin seeds (jeera)",
+   "bay leaf (tej patta)",
+   "cloves (laung)",
+   "cardamom (elaichi)",
+   "cinnamon (dalchini)"
+  ],
+  "steps": "Rinse and soak the rice for 15 minutes. Heat the ghee and fry the whole spices for 30 seconds, then the sliced onion until golden. Add the diced carrots, beans and peas and stir for 2 minutes. Add the drained rice, 1¾ cups of water per cup of rice and salt. Cover and cook on low for 12 minutes, then rest 5 minutes.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Tamatar Paneer",
+  "cuisine": "Indian",
+  "minutes": 25,
+  "servings": 3,
+  "ingredients": [
+   "paneer",
+   "tomatoes",
+   "cumin seeds (jeera)",
+   "asafoetida (hing)",
+   "turmeric (haldi)",
+   "red chili powder (lal mirch)",
+   "garam masala",
+   "fresh cream"
+  ],
+  "steps": "Blend the tomatoes into a puree. Crackle the cumin seeds in oil, add the hing, then the puree, turmeric, chili powder and salt. Cook until thick and the oil separates. Add cubed paneer, garam masala and a spoon of cream and simmer 3 minutes.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Aloo Paratha",
+  "cuisine": "Indian",
+  "minutes": 40,
+  "servings": 4,
+  "ingredients": [
+   "whole wheat flour (atta)",
+   "potatoes (aloo)",
+   "green chilies (hari mirch)",
+   "cilantro (hara dhania)",
+   "carom seeds (ajwain)",
+   "amchur",
+   "ghee"
+  ],
+  "steps": "Knead the atta with water and a pinch of salt into a soft dough and rest it for 15 minutes. Boil and mash the potatoes, then mix in chopped green chilies, cilantro, ajwain, amchur and salt. Roll a ball of dough, fill it with the potato mix, seal and roll it out gently. Cook on a hot tawa, brushing with ghee, until golden spots appear on both sides.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "CCFA Tea",
+  "cuisine": "Indian",
+  "minutes": 10,
+  "servings": 1,
+  "ingredients": [
+   "cumin seeds (jeera)",
+   "coriander seeds (dhania)",
+   "fennel seeds (saunf)",
+   "carom seeds (ajwain)",
+   "water"
+  ],
+  "steps": "Add half a teaspoon each of cumin, coriander, fennel and ajwain seeds to 1½ cups of water. Simmer 5 to 7 minutes until it reduces to about a cup. Strain and sip warm.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Soaked Walnuts and Black Raisins",
+  "cuisine": "Indian",
+  "minutes": 5,
+  "servings": 1,
+  "ingredients": [
+   "walnuts (akhrot)",
+   "black raisins"
+  ],
+  "steps": "Soak 3 walnut halves and 5 black raisins in water overnight. Drain and eat first thing in the morning.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": false
+  }
+ },
+ {
+  "title": "Soaked Almonds",
+  "cuisine": "Indian",
+  "minutes": 5,
+  "servings": 1,
+  "ingredients": [
+   "almonds (badam)"
+  ],
+  "steps": "Soak 5 almonds in water overnight. Peel if you like and eat in the morning.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": false
+  }
+ },
+ {
+  "title": "Soaked Brazil Nut, Fig and Methi Seeds",
+  "cuisine": "Indian",
+  "minutes": 5,
+  "servings": 1,
+  "ingredients": [
+   "brazil nuts",
+   "dried figs (anjeer)",
+   "fenugreek seeds (methi)"
+  ],
+  "steps": "Soak 1 Brazil nut, 1 dried fig and a spoon of methi seeds overnight in a little water. Eat in the morning; you can drink the methi water too.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": false
+  }
+ },
+ {
+  "title": "Ragi Ganji",
+  "cuisine": "South Indian",
+  "minutes": 10,
+  "servings": 1,
+  "ingredients": [
+   "ragi flour",
+   "water",
+   "buttermilk",
+   "salt"
+  ],
+  "steps": "Whisk 2 tablespoons of ragi flour into 1 cup of cold water until smooth. Cook on low, stirring, for 5 to 6 minutes until it thickens and turns glossy. Cool slightly, then stir in buttermilk and a pinch of salt.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Almond Milk Tea",
+  "cuisine": "Indian",
+  "minutes": 10,
+  "servings": 1,
+  "ingredients": [
+   "black tea (chai patti)",
+   "almond milk",
+   "cardamom (elaichi)"
+  ],
+  "steps": "Simmer the tea and a crushed cardamom pod in half a cup of water for 2 minutes. Add half a cup of almond milk and heat until just steaming, without boiling hard. Strain.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": false
+  }
+ },
+ {
+  "title": "Spearmint Tea",
+  "cuisine": "Global",
+  "minutes": 5,
+  "servings": 1,
+  "ingredients": [
+   "spearmint leaves",
+   "water"
+  ],
+  "steps": "Pour just-boiled water over a small handful of spearmint leaves or a teabag. Steep 5 minutes and strain.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Mushroom Spinach Omelette",
+  "cuisine": "Indian",
+  "minutes": 15,
+  "servings": 1,
+  "ingredients": [
+   "eggs",
+   "mushrooms",
+   "spinach (palak)",
+   "black pepper",
+   "salt"
+  ],
+  "steps": "Sauté sliced mushrooms in a little oil until browned, then add the spinach until it wilts. Pour in 3 beaten eggs seasoned with salt and pepper. Cook on medium until set, then fold.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Spinach Besan Chilla",
+  "cuisine": "Indian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "besan (gram flour)",
+   "spinach (palak)",
+   "green chilies (hari mirch)",
+   "carom seeds (ajwain)",
+   "turmeric (haldi)"
+  ],
+  "steps": "Whisk the besan with turmeric, ajwain, salt and water into a pourable batter. Stir in finely chopped spinach and green chili. Spread thin on a hot oiled pan, cook until the edges lift, flip and cook 1 minute more. Serve with coriander mint chutney.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Coriander Mint Chutney",
+  "cuisine": "Indian",
+  "minutes": 10,
+  "servings": 4,
+  "ingredients": [
+   "cilantro (hara dhania)",
+   "mint leaves (pudina)",
+   "green chilies (hari mirch)",
+   "lemon",
+   "cumin seeds (jeera)",
+   "salt"
+  ],
+  "steps": "Blend a big handful of cilantro, half as much mint, 1 or 2 green chilies, a pinch of cumin, lemon juice, salt and a splash of cold water until smooth. Keeps 3 days in the fridge.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Coconut Chutney",
+  "cuisine": "South Indian",
+  "minutes": 10,
+  "servings": 4,
+  "ingredients": [
+   "grated coconut (nariyal)",
+   "roasted chana",
+   "green chilies (hari mirch)",
+   "mustard seeds (rai)",
+   "curry leaves (kadi patta)",
+   "salt"
+  ],
+  "steps": "Blend the coconut, roasted chana, green chili and salt with a little water until smooth. Crackle mustard seeds and curry leaves in a spoon of oil and pour over the chutney.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Yogurt Chia Pudding with Berries",
+  "cuisine": "Global",
+  "minutes": 5,
+  "servings": 1,
+  "ingredients": [
+   "yogurt (dahi)",
+   "chia seeds",
+   "berries"
+  ],
+  "steps": "Stir 2 tablespoons of chia seeds into 200 g of yogurt. Chill at least 2 hours or overnight, then top with berries.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Yellow Moong Dal Egg Chilla",
+  "cuisine": "Indian",
+  "minutes": 25,
+  "servings": 2,
+  "ingredients": [
+   "yellow moong dal",
+   "eggs",
+   "green chilies (hari mirch)",
+   "ginger (adrak)",
+   "cilantro (hara dhania)",
+   "cumin seeds (jeera)"
+  ],
+  "steps": "Soak the moong dal for 3 hours, then grind it with ginger, green chili, cumin and salt into a smooth batter. Spread a ladle thin on a hot pan, crack an egg over it and spread it out. Cook until set, flip briefly and finish with cilantro.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Sourdough Toast with Guacamole and Spinach Scrambled Eggs",
+  "cuisine": "Global",
+  "minutes": 15,
+  "servings": 1,
+  "ingredients": [
+   "sourdough bread",
+   "avocado",
+   "lemon",
+   "eggs",
+   "spinach (palak)",
+   "black pepper"
+  ],
+  "steps": "Mash the avocado with lemon juice, salt and pepper. Wilt the spinach in a pan, add the beaten eggs and stir gently until softly set. Toast the sourdough, spread the guacamole and top with the eggs.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Sourdough Toast with Hummus and Eggs",
+  "cuisine": "Global",
+  "minutes": 15,
+  "servings": 1,
+  "ingredients": [
+   "sourdough bread",
+   "hummus",
+   "eggs",
+   "black pepper"
+  ],
+  "steps": "Toast the sourdough and spread it thickly with hummus. Top with 2 eggs, fried or scrambled, and a crack of black pepper.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Ragi Moong Dal Idli",
+  "cuisine": "South Indian",
+  "minutes": 30,
+  "servings": 3,
+  "ingredients": [
+   "ragi flour",
+   "yellow moong dal",
+   "yogurt (dahi)",
+   "fruit salt (eno)",
+   "salt"
+  ],
+  "steps": "Soak the moong dal for 3 hours and grind it smooth. Mix with ragi flour, yogurt, salt and enough water for a thick batter, and rest 15 minutes. Stir in the fruit salt, fill greased idli plates and steam 12 minutes. Serve with coconut or peanut chutney.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Mixed Dal Idli",
+  "cuisine": "South Indian",
+  "minutes": 30,
+  "servings": 3,
+  "ingredients": [
+   "yellow moong dal",
+   "chana dal",
+   "urad dal",
+   "ginger (adrak)",
+   "green chilies (hari mirch)",
+   "fruit salt (eno)",
+   "salt"
+  ],
+  "steps": "Soak the three dals together for 4 hours, then grind them with ginger, green chili and salt into a thick batter. Stir in the fruit salt, fill greased idli plates and steam 12 to 15 minutes.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Egg Pesarattu",
+  "cuisine": "South Indian",
+  "minutes": 25,
+  "servings": 2,
+  "ingredients": [
+   "green moong",
+   "ginger (adrak)",
+   "green chilies (hari mirch)",
+   "cumin seeds (jeera)",
+   "eggs",
+   "salt"
+  ],
+  "steps": "Soak whole green moong overnight, then grind it with ginger, green chili, cumin and salt into a batter. Spread a ladle thin on a hot pan, crack an egg on top and spread it over. Drizzle oil, cook until crisp underneath, and fold. Serve with coconut or tomato chutney.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Moong Dal Dosa",
+  "cuisine": "South Indian",
+  "minutes": 25,
+  "servings": 2,
+  "ingredients": [
+   "yellow moong dal",
+   "ginger (adrak)",
+   "green chilies (hari mirch)",
+   "cumin seeds (jeera)",
+   "salt"
+  ],
+  "steps": "Soak the moong dal for 3 hours and grind it with ginger, green chili, cumin and salt into a smooth batter. Spread thin on a hot pan, drizzle a little oil and cook until golden. Serve with mint chutney.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Quinoa Egg Dosa",
+  "cuisine": "South Indian",
+  "minutes": 25,
+  "servings": 2,
+  "ingredients": [
+   "quinoa",
+   "urad dal",
+   "eggs",
+   "salt"
+  ],
+  "steps": "Soak the quinoa and urad dal for 4 hours and grind into a smooth batter with salt. Spread a ladle on a hot pan, crack an egg over it and spread. Cook until set and golden underneath, then fold.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Ragi Oats Dosa with Paneer",
+  "cuisine": "South Indian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "ragi flour",
+   "oats",
+   "yogurt (dahi)",
+   "paneer",
+   "green chilies (hari mirch)",
+   "cilantro (hara dhania)",
+   "salt"
+  ],
+  "steps": "Grind the oats to a powder, mix with ragi flour, yogurt, salt and water into a pourable batter, and rest 10 minutes. Spread on a hot pan, sprinkle with grated paneer, green chili and cilantro, and cook until crisp.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Overnight Soaked Oats",
+  "cuisine": "Global",
+  "minutes": 5,
+  "servings": 1,
+  "ingredients": [
+   "rolled oats",
+   "milk",
+   "chia seeds",
+   "black raisins",
+   "berries"
+  ],
+  "steps": "Mix 40 g of oats with 200 ml of milk or yogurt, a tablespoon of chia seeds and 5 black raisins. Refrigerate overnight and top with berries in the morning.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "High-Protein Cocoa Oatmeal",
+  "cuisine": "Global",
+  "minutes": 10,
+  "servings": 1,
+  "ingredients": [
+   "rolled oats",
+   "milk",
+   "chia seeds",
+   "cocoa powder",
+   "black raisins",
+   "peanut butter"
+  ],
+  "steps": "Simmer 40 g of oats in 200 ml of milk for 4 minutes, stirring. Stir in the chia seeds and half a spoon of cocoa, then top with raisins and a spoon of peanut butter.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": false
+  }
+ },
+ {
+  "title": "Vegetable Upma",
+  "cuisine": "South Indian",
+  "minutes": 25,
+  "servings": 2,
+  "ingredients": [
+   "semolina (rava)",
+   "onion",
+   "carrots",
+   "green beans",
+   "peas (matar)",
+   "mustard seeds (rai)",
+   "curry leaves (kadi patta)",
+   "green chilies (hari mirch)"
+  ],
+  "steps": "Dry-roast the semolina and set it aside. Crackle the mustard seeds with curry leaves and green chili, then soften the onion. Add the diced carrots, beans and peas with salt and cook 3 minutes. Pour in 2½ cups of water, bring to a boil and stream in the semolina while stirring. Cover and cook 3 minutes.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Broken Wheat Vegetable Upma",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 2,
+  "ingredients": [
+   "broken wheat (dalia)",
+   "onion",
+   "carrots",
+   "green beans",
+   "peas (matar)",
+   "mustard seeds (rai)",
+   "curry leaves (kadi patta)",
+   "green chilies (hari mirch)"
+  ],
+  "steps": "Roast the broken wheat in a dry pan until fragrant. Crackle mustard seeds and curry leaves, soften the onion and green chili, then add the vegetables. Add the wheat, 2½ cups of water and salt, cover and cook on low 15 minutes until tender.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Vegetable Poha",
+  "cuisine": "Indian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "poha",
+   "onion",
+   "green beans",
+   "peas (matar)",
+   "carrots",
+   "mustard seeds (rai)",
+   "curry leaves (kadi patta)",
+   "turmeric (haldi)",
+   "lemon"
+  ],
+  "steps": "Rinse the poha and let it soften 5 minutes. Crackle the mustard seeds with curry leaves, add the onion, then the finely chopped beans, carrots and peas with a splash of water; cover until tender. Add turmeric, salt and the poha, toss gently and finish with lemon juice.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Chickpea Pomegranate Salad",
+  "cuisine": "Indian",
+  "minutes": 10,
+  "servings": 1,
+  "ingredients": [
+   "canned chickpeas",
+   "pomegranate (anar)",
+   "cucumber",
+   "lemon",
+   "cilantro (hara dhania)",
+   "chaat masala"
+  ],
+  "steps": "Toss 60 g of drained chickpeas with half a pomegranate's seeds, diced cucumber, cilantro, lemon juice, chaat masala and salt.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Mixed Pulses Chaat",
+  "cuisine": "Indian",
+  "minutes": 15,
+  "servings": 2,
+  "ingredients": [
+   "cowpeas (lobia)",
+   "kala chana",
+   "green moong",
+   "onion",
+   "tomatoes",
+   "lemon",
+   "chaat masala",
+   "cilantro (hara dhania)"
+  ],
+  "steps": "Soak the cowpeas, kala chana and green moong overnight, then pressure-cook until just tender. Toss with chopped onion, tomato, cilantro, lemon juice, chaat masala and salt.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Tofu Curry",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 3,
+  "ingredients": [
+   "tofu",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "turmeric (haldi)",
+   "coriander powder (dhania)",
+   "garam masala"
+  ],
+  "steps": "Press and cube the tofu, then sear until golden. Fry the onion, add ginger and garlic, then the tomatoes and spices with salt and cook into a thick masala. Add a cup of water and the tofu and simmer 8 minutes.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Tofu Bhurji",
+  "cuisine": "Indian",
+  "minutes": 15,
+  "servings": 2,
+  "ingredients": [
+   "tofu",
+   "onion",
+   "tomatoes",
+   "green chilies (hari mirch)",
+   "turmeric (haldi)",
+   "cilantro (hara dhania)"
+  ],
+  "steps": "Soften the onion and green chili in oil, add the tomatoes, turmeric and salt and cook until soft. Crumble in the tofu and stir for 4 minutes. Finish with cilantro.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Spinach Methi Dal",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 3,
+  "ingredients": [
+   "toor dal (arhar)",
+   "spinach (palak)",
+   "fenugreek leaves (methi)",
+   "tomatoes",
+   "garlic",
+   "cumin seeds (jeera)",
+   "turmeric (haldi)"
+  ],
+  "steps": "Pressure-cook the dal with turmeric and salt until soft. Crackle cumin and garlic in oil, add the tomatoes, then the chopped spinach and methi until wilted. Stir in the dal with some water and simmer 5 minutes.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Tomato Drumstick Curry",
+  "cuisine": "South Indian",
+  "minutes": 30,
+  "servings": 3,
+  "ingredients": [
+   "drumsticks",
+   "tomatoes",
+   "onion",
+   "mustard seeds (rai)",
+   "curry leaves (kadi patta)",
+   "turmeric (haldi)",
+   "red chili powder (lal mirch)",
+   "coriander powder (dhania)"
+  ],
+  "steps": "Cut the drumsticks into finger lengths. Crackle mustard seeds and curry leaves, fry the onion, then add the tomatoes and spices with salt. Add the drumsticks and a cup of water, cover and simmer 15 minutes until tender.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Drumstick Dal",
+  "cuisine": "South Indian",
+  "minutes": 35,
+  "servings": 4,
+  "ingredients": [
+   "toor dal (arhar)",
+   "drumsticks",
+   "tomatoes",
+   "tamarind (imli)",
+   "mustard seeds (rai)",
+   "curry leaves (kadi patta)",
+   "turmeric (haldi)",
+   "sambar powder"
+  ],
+  "steps": "Pressure-cook the dal with turmeric. Simmer the drumstick pieces with tomatoes, tamarind water, sambar powder and salt until tender. Add the dal and simmer 5 minutes, then pour over a tempering of mustard seeds and curry leaves.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Drumstick Egg Curry",
+  "cuisine": "South Indian",
+  "minutes": 35,
+  "servings": 3,
+  "ingredients": [
+   "drumsticks",
+   "eggs",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "turmeric (haldi)",
+   "red chili powder (lal mirch)",
+   "coriander powder (dhania)"
+  ],
+  "steps": "Hard-boil and peel 2 eggs. Fry the onion, add ginger and garlic, then the tomatoes and spices. Add the drumstick pieces with a cup of water and simmer 12 minutes, then add the eggs and simmer 5 more.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Drumstick Soup",
+  "cuisine": "South Indian",
+  "minutes": 30,
+  "servings": 2,
+  "ingredients": [
+   "drumsticks",
+   "tomatoes",
+   "garlic",
+   "black pepper",
+   "cumin seeds (jeera)"
+  ],
+  "steps": "Simmer the drumstick pieces with a tomato and garlic in 3 cups of water for 20 minutes. Scrape the pulp from the drumsticks, blend it with the tomato and strain. Season with pepper, roasted cumin and salt.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Air-Fried Chicken",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 2,
+  "ingredients": [
+   "chicken breast",
+   "yogurt (dahi)",
+   "ginger (adrak)",
+   "garlic",
+   "red chili powder (lal mirch)",
+   "turmeric (haldi)",
+   "garam masala",
+   "lemon"
+  ],
+  "steps": "Marinate bite-sized chicken in yogurt, ginger, garlic, spices, lemon and salt for at least 20 minutes. Air-fry at 200°C (400°F) for 14 to 16 minutes, shaking halfway, until cooked through.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": false,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Methi Chicken",
+  "cuisine": "Indian",
+  "minutes": 40,
+  "servings": 3,
+  "ingredients": [
+   "chicken breast",
+   "fenugreek leaves (methi)",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "yogurt (dahi)",
+   "garam masala"
+  ],
+  "steps": "Fry the onion until golden, then add ginger and garlic, the tomatoes and salt. Add the chicken and cook 5 minutes, then the whisked yogurt and garam masala. Cover and simmer 15 minutes. Stir in the chopped methi and cook 5 minutes more.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": false,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Gongura Chicken Pulao",
+  "cuisine": "South Indian",
+  "minutes": 45,
+  "servings": 3,
+  "ingredients": [
+   "chicken breast",
+   "brown rice",
+   "gongura",
+   "onion",
+   "ginger (adrak)",
+   "garlic",
+   "green chilies (hari mirch)",
+   "garam masala"
+  ],
+  "steps": "Cook the gongura leaves with a little salt until they collapse into a tangy paste. Fry the onion, ginger, garlic and green chilies, add the chicken and brown it, then the gongura and garam masala. Add the soaked brown rice and 2½ cups of water and cook covered until the rice is tender.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": false,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Chicken Pulao",
+  "cuisine": "Indian",
+  "minutes": 45,
+  "servings": 3,
+  "ingredients": [
+   "chicken breast",
+   "brown rice",
+   "onion",
+   "yogurt (dahi)",
+   "ginger (adrak)",
+   "garlic",
+   "bay leaf (tej patta)",
+   "garam masala"
+  ],
+  "steps": "Fry the bay leaf and onion until golden, add ginger and garlic, then the chicken and yogurt, and cook 5 minutes. Add the soaked brown rice, garam masala, salt and 2½ cups of water. Cover and cook on low until the rice is tender.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": false,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Broccoli Almond Soup",
+  "cuisine": "Global",
+  "minutes": 25,
+  "servings": 2,
+  "ingredients": [
+   "broccoli",
+   "almonds (badam)",
+   "onion",
+   "garlic",
+   "black pepper"
+  ],
+  "steps": "Soften the onion and garlic in a little oil. Add the broccoli, a handful of almonds and 3 cups of water with salt, and simmer 12 minutes. Blend smooth and season with pepper.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": false
+  }
+ },
+ {
+  "title": "Pumpkin Soup",
+  "cuisine": "Global",
+  "minutes": 30,
+  "servings": 2,
+  "ingredients": [
+   "pumpkin (kaddu)",
+   "onion",
+   "garlic",
+   "black pepper",
+   "cumin seeds (jeera)"
+  ],
+  "steps": "Soften the onion and garlic, add the cubed pumpkin and 3 cups of water with salt, and simmer 15 minutes. Blend smooth and season with pepper and roasted cumin.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Ragi Tofu Soup",
+  "cuisine": "Indian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "ragi flour",
+   "tofu",
+   "mixed vegetables",
+   "garlic",
+   "black pepper"
+  ],
+  "steps": "Simmer finely chopped vegetables and garlic in 3 cups of water for 8 minutes. Whisk 2 tablespoons of ragi flour with cold water, stir it in and cook until it thickens. Add cubed tofu, salt and pepper and heat through.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Spinach Soup",
+  "cuisine": "Global",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "spinach (palak)",
+   "onion",
+   "garlic",
+   "black pepper"
+  ],
+  "steps": "Soften the onion and garlic, add the spinach and 2 cups of water and simmer 5 minutes. Blend smooth and season with salt and pepper.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Soya Chunks Pulao",
+  "cuisine": "Indian",
+  "minutes": 35,
+  "servings": 3,
+  "ingredients": [
+   "soya chunks",
+   "brown rice",
+   "onion",
+   "peas (matar)",
+   "carrots",
+   "cumin seeds (jeera)",
+   "bay leaf (tej patta)",
+   "garam masala"
+  ],
+  "steps": "Soak the soya chunks in hot water for 10 minutes and squeeze dry. Fry the cumin and bay leaf, then the onion, vegetables and soya. Add the soaked brown rice, garam masala, salt and water, cover and cook until tender.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Soya Chunks Curry",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 3,
+  "ingredients": [
+   "soya chunks",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "turmeric (haldi)",
+   "coriander powder (dhania)",
+   "garam masala"
+  ],
+  "steps": "Soak the soya chunks in hot water and squeeze dry. Fry the onion, then ginger, garlic, tomatoes and spices into a masala. Add the soya and a cup of water and simmer 10 minutes.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Paneer Chickpeas Pulao",
+  "cuisine": "Indian",
+  "minutes": 35,
+  "servings": 3,
+  "ingredients": [
+   "paneer",
+   "canned chickpeas",
+   "brown rice",
+   "onion",
+   "cumin seeds (jeera)",
+   "bay leaf (tej patta)",
+   "garam masala"
+  ],
+  "steps": "Fry the cumin and bay leaf, then the onion until golden. Add the soaked brown rice, drained chickpeas, garam masala, salt and water, and cook covered until tender. Fold in cubes of lightly seared paneer.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Sprouts Curry",
+  "cuisine": "Indian",
+  "minutes": 25,
+  "servings": 3,
+  "ingredients": [
+   "moong sprouts",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "turmeric (haldi)",
+   "coriander powder (dhania)",
+   "garam masala"
+  ],
+  "steps": "Fry the onion and ginger, add the tomatoes and spices with salt and cook until soft. Add the sprouts and half a cup of water, cover and cook 8 minutes until just tender.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Mushroom Peas Curry",
+  "cuisine": "Indian",
+  "minutes": 25,
+  "servings": 3,
+  "ingredients": [
+   "mushrooms",
+   "peas (matar)",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "turmeric (haldi)",
+   "garam masala"
+  ],
+  "steps": "Fry the onion, add ginger and garlic, then the tomatoes, turmeric and salt into a masala. Add the sliced mushrooms and peas and cook 10 minutes. Finish with garam masala.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Mixed Vegetable Curry",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 3,
+  "ingredients": [
+   "green beans",
+   "broccoli",
+   "peas (matar)",
+   "carrots",
+   "onion",
+   "tomatoes",
+   "turmeric (haldi)",
+   "coriander powder (dhania)"
+  ],
+  "steps": "Fry the onion, add the tomatoes and spices with salt and cook until soft. Add the chopped vegetables and half a cup of water, cover and cook until just tender.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Sautéed Beans, Broccoli and Asparagus",
+  "cuisine": "Global",
+  "minutes": 15,
+  "servings": 2,
+  "ingredients": [
+   "green beans",
+   "broccoli",
+   "asparagus",
+   "garlic",
+   "black pepper"
+  ],
+  "steps": "Blanch the vegetables for 2 minutes. Sauté the garlic in a little oil, add the vegetables and toss on high heat for 3 minutes with salt and pepper.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Cauliflower Peas Curry",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 3,
+  "ingredients": [
+   "cauliflower (gobi)",
+   "peas (matar)",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "turmeric (haldi)",
+   "coriander powder (dhania)",
+   "garam masala"
+  ],
+  "steps": "Fry the onion and ginger, add the tomatoes and spices with salt. Add the cauliflower florets and peas with a splash of water, cover and cook 12 minutes until tender.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Cauliflower Egg Curry",
+  "cuisine": "Indian",
+  "minutes": 35,
+  "servings": 3,
+  "ingredients": [
+   "cauliflower (gobi)",
+   "eggs",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "turmeric (haldi)",
+   "garam masala"
+  ],
+  "steps": "Hard-boil and peel 3 eggs. Make a masala with onion, ginger, garlic, tomatoes and spices. Add the cauliflower and a cup of water and cook until tender, then add the eggs and simmer 5 minutes.",
+  "labels": {
+   "vegetarian": false,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Pumpkin Curry",
+  "cuisine": "Indian",
+  "minutes": 25,
+  "servings": 3,
+  "ingredients": [
+   "pumpkin (kaddu)",
+   "mustard seeds (rai)",
+   "fenugreek seeds (methi)",
+   "green chilies (hari mirch)",
+   "turmeric (haldi)",
+   "amchur",
+   "jaggery"
+  ],
+  "steps": "Crackle mustard and methi seeds in oil, add green chili, then the cubed pumpkin with turmeric and salt. Cover and cook on low until soft, then add amchur and a little jaggery and mash lightly.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Bottle Gourd Dal",
+  "cuisine": "Indian",
+  "minutes": 30,
+  "servings": 4,
+  "ingredients": [
+   "toor dal (arhar)",
+   "bottle gourd (lauki)",
+   "tomatoes",
+   "cumin seeds (jeera)",
+   "turmeric (haldi)",
+   "asafoetida (hing)"
+  ],
+  "steps": "Pressure-cook the dal with the cubed bottle gourd, turmeric and salt. Crackle cumin and hing in oil, add the tomatoes and cook until soft, then stir in the dal and simmer 5 minutes.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Ivy Gourd Fry",
+  "cuisine": "South Indian",
+  "minutes": 25,
+  "servings": 2,
+  "ingredients": [
+   "ivy gourd (tindora)",
+   "mustard seeds (rai)",
+   "curry leaves (kadi patta)",
+   "turmeric (haldi)",
+   "red chili powder (lal mirch)"
+  ],
+  "steps": "Slice the ivy gourd into thin rounds. Crackle mustard seeds and curry leaves, add the ivy gourd with turmeric and salt, and cook uncovered on medium, stirring, until tender and lightly crisp. Finish with chili powder.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Air-Fried Bhindi",
+  "cuisine": "Indian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "okra (bhindi)",
+   "besan (gram flour)",
+   "red chili powder (lal mirch)",
+   "amchur",
+   "turmeric (haldi)"
+  ],
+  "steps": "Slit the dry okra lengthwise and toss with besan, spices, salt and a teaspoon of oil. Air-fry at 190°C (375°F) for 12 to 14 minutes, shaking halfway, until crisp.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Capsicum Stir Fry",
+  "cuisine": "Indian",
+  "minutes": 15,
+  "servings": 2,
+  "ingredients": [
+   "bell peppers",
+   "onion",
+   "cumin seeds (jeera)",
+   "turmeric (haldi)",
+   "coriander powder (dhania)"
+  ],
+  "steps": "Crackle the cumin, add sliced onion and bell peppers, and stir-fry on high with turmeric, coriander powder and salt for 5 minutes, keeping some crunch.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Low-Fat Paneer Stir Fry",
+  "cuisine": "Indian",
+  "minutes": 15,
+  "servings": 2,
+  "ingredients": [
+   "low fat paneer",
+   "bell peppers",
+   "onion",
+   "black pepper",
+   "cumin seeds (jeera)"
+  ],
+  "steps": "Stir-fry the cumin, sliced onion and bell peppers on high heat for 3 minutes. Add cubed paneer, salt and pepper and toss 2 minutes more.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Low-Fat Paneer Curry",
+  "cuisine": "Indian",
+  "minutes": 25,
+  "servings": 3,
+  "ingredients": [
+   "low fat paneer",
+   "onion",
+   "tomatoes",
+   "ginger (adrak)",
+   "garlic",
+   "turmeric (haldi)",
+   "garam masala"
+  ],
+  "steps": "Fry the onion, then ginger, garlic, tomatoes and spices into a thick masala. Add a cup of water and simmer 5 minutes, then add the paneer cubes and simmer 3 minutes.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Paneer Wraps",
+  "cuisine": "Indian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "whole wheat roti",
+   "low fat paneer",
+   "onion",
+   "bell peppers",
+   "yogurt (dahi)",
+   "mint leaves (pudina)",
+   "chaat masala"
+  ],
+  "steps": "Sear the paneer with sliced onion, peppers, chaat masala and salt. Mix the yogurt with chopped mint. Spread the mint yogurt on warm rotis, fill with the paneer and roll up.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Sambar",
+  "cuisine": "South Indian",
+  "minutes": 40,
+  "servings": 4,
+  "ingredients": [
+   "toor dal (arhar)",
+   "drumsticks",
+   "pumpkin (kaddu)",
+   "tomatoes",
+   "tamarind (imli)",
+   "sambar powder",
+   "mustard seeds (rai)",
+   "curry leaves (kadi patta)",
+   "asafoetida (hing)"
+  ],
+  "steps": "Pressure-cook the dal until soft. Simmer the vegetables in tamarind water with sambar powder, tomatoes and salt until tender. Add the dal and simmer 10 minutes. Pour over a tempering of mustard seeds, curry leaves and hing.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": false,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Jowar Roti",
+  "cuisine": "Indian",
+  "minutes": 25,
+  "servings": 3,
+  "ingredients": [
+   "jowar flour",
+   "warm water",
+   "salt"
+  ],
+  "steps": "Knead the jowar flour with salt and warm water into a soft dough. Pat or roll each ball into a thin round between sheets, cook on a hot tawa, sprinkle with water, flip and puff over the flame.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Ragi Mudde",
+  "cuisine": "South Indian",
+  "minutes": 20,
+  "servings": 2,
+  "ingredients": [
+   "ragi flour",
+   "water",
+   "salt"
+  ],
+  "steps": "Bring 1 cup of water with salt to a boil. Add half a cup of ragi flour in a heap, cook 2 minutes without stirring, then mix hard with a flat spoon until smooth. Wet your hands and shape into balls. Serve with sambar or dal.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Seed Mix Crackers",
+  "cuisine": "Global",
+  "minutes": 60,
+  "servings": 6,
+  "ingredients": [
+   "flaxseeds",
+   "sunflower seeds",
+   "pumpkin seeds",
+   "sesame seeds",
+   "chia seeds",
+   "salt"
+  ],
+  "steps": "Mix the seeds with salt and about 1 cup of water and rest 15 minutes until it binds. Spread thin on a lined tray and bake at 160°C (325°F) for 30 minutes. Score into squares, flip and bake 20 minutes more until crisp.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Roasted Makhana",
+  "cuisine": "Indian",
+  "minutes": 10,
+  "servings": 2,
+  "ingredients": [
+   "makhana",
+   "ghee",
+   "black pepper",
+   "turmeric (haldi)"
+  ],
+  "steps": "Warm a teaspoon of ghee, add the makhana and roast on low for 6 to 8 minutes until crisp. Toss with salt, pepper and a pinch of turmeric.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Baked Chickpeas",
+  "cuisine": "Global",
+  "minutes": 35,
+  "servings": 2,
+  "ingredients": [
+   "canned chickpeas",
+   "red chili powder (lal mirch)",
+   "cumin seeds (jeera)"
+  ],
+  "steps": "Pat the chickpeas very dry, toss with a teaspoon of oil, chili, ground cumin and salt, and bake or air-fry at 200°C (400°F) for 20 to 25 minutes until crunchy.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Carrot Cucumber Sticks with Hummus",
+  "cuisine": "Global",
+  "minutes": 5,
+  "servings": 1,
+  "ingredients": [
+   "carrots",
+   "cucumber",
+   "hummus"
+  ],
+  "steps": "Cut 100 g of carrot and cucumber into sticks and serve with 2 tablespoons of hummus.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Stewed Apple with Cinnamon",
+  "cuisine": "Global",
+  "minutes": 15,
+  "servings": 1,
+  "ingredients": [
+   "apple",
+   "cinnamon (dalchini)"
+  ],
+  "steps": "Dice an apple and simmer it with a splash of water and a pinch of cinnamon for 8 to 10 minutes until soft.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": true,
+   "nut_free": true
+  }
+ },
+ {
+  "title": "Black Sesame Jaggery Laddoo",
+  "cuisine": "Indian",
+  "minutes": 25,
+  "servings": 10,
+  "ingredients": [
+   "black sesame seeds (til)",
+   "jaggery",
+   "cardamom (elaichi)",
+   "ghee"
+  ],
+  "steps": "Dry-roast the sesame seeds until they crackle, then cool and pulse coarsely. Melt the jaggery with a spoon of ghee until bubbly, stir in the sesame and cardamom, and shape into small laddoos while warm.",
+  "labels": {
+   "vegetarian": true,
+   "eggetarian": true,
+   "non_veg": true,
+   "gluten_free": true,
+   "dairy_free": false,
+   "nut_free": true
+  }
+ }
+]

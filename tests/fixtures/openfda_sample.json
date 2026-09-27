@@ -1,0 +1,18 @@
+{
+  "_comment": "Made-up records in the shape of openFDA food enforcement results, for tests only.",
+  "results": [
+    {"recall_number": "F-0001-2026", "report_date": "20260910", "recall_initiation_date": "20260828",
+     "status": "Ongoing", "classification": "Class I", "recalling_firm": "Greenleaf Farms LLC",
+     "product_description": "Greenleaf Farms Organic Baby Spinach, 5 oz clamshell, UPC 000000000001",
+     "reason_for_recall": "Potential contamination with Listeria monocytogenes.",
+     "distribution_pattern": "Nationwide", "code_info": "Best by 09/20/2026 through 09/25/2026", "state": "CA"},
+    {"recall_number": "F-0002-2026", "report_date": "20260801", "status": "Ongoing", "classification": "Class II",
+     "recalling_firm": "Sample Dairy Co", "product_description": "Whole Milk Greek Yogurt, plain, 32 oz tub",
+     "reason_for_recall": "Undeclared almonds.", "code_info": "Lot 1234"},
+    {"recall_number": "F-0003-2025", "report_date": "20251115", "status": "Terminated", "classification": "Class III",
+     "recalling_firm": "Snack Makers Inc", "product_description": "Cheddar cheese crackers, 8 oz box",
+     "reason_for_recall": "Net weight below label."},
+    {"recall_number": "F-0001-2026", "report_date": "20260910", "product_description": "duplicate of the first"},
+    {"recall_number": "", "product_description": "missing recall number"}
+  ]
+}

@@ -1,0 +1,13 @@
+[
+  {"name": "recall_number", "type": "STRING"},
+  {"name": "report_date", "type": "STRING"},
+  {"name": "recall_initiation_date", "type": "STRING"},
+  {"name": "status", "type": "STRING"},
+  {"name": "classification", "type": "STRING"},
+  {"name": "recalling_firm", "type": "STRING"},
+  {"name": "product_description", "type": "STRING"},
+  {"name": "reason_for_recall", "type": "STRING"},
+  {"name": "distribution_pattern", "type": "STRING"},
+  {"name": "code_info", "type": "STRING"},
+  {"name": "state", "type": "STRING"}
+]
